@@ -24,3 +24,41 @@ h2 {
 
 [target] {background: orange;}
 
+.inline-example {
+    display: inline;
+}
+
+.block-example {
+    display: block;
+}
+.inline-block {
+    display: inline-block;
+}
+
+#relative-example {
+    position: relative;
+    top:10px;
+    left:10px;
+}
+
+#static-example {
+    position: static;
+
+}
+
+#fixed-example {
+    position: fixed;
+
+}
+
+#sticky-example {
+    position: sticky;
+    top: 0; 
+    background-color: red;}
+
+#absolute-example {
+    position: absolute;
+
+}
+
+
