@@ -1,0 +1,36 @@
+h1 {
+     font-size: 54px;
+     font-family: Nunito, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 10px;
+    font-family: "Nunito Sans", "Nunito", Verdana, sans-serif;
+    font-weight: 800;
+    color: #A9D926;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 33px;
+    font-family: "Nunito Sans", "Nunito", Verdana, sans-serif;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 18px;
+    font-family: "Nunito Sans", "Nunito", Verdana, sans-serif;
+    font-weight: 800;
+}
+
+p {
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #32506A;
+}
+
+#footer {
+    background-color: #1F3A52;
+    color: #FCFCFA;
+}
