@@ -1,0 +1,78 @@
+#header {
+    background: white;
+    border: 1px solid red;
+}
+
+
+#hero {
+    background: #edf6d2;
+    border: 1px solid green;
+}
+
+#slider {
+    background: #dde0e7;
+    border: 1px solid gray;
+}
+
+#workwise {
+    border: 1px solid black;
+}
+
+.boxed {
+    background-color: #1f3a52;
+    color: #fcfcfa;
+    border: 1px solid red;
+}
+
+#projects {
+    background-color: #edf6d2;
+    border: 1px solid green;
+}
+
+#me {
+    border: 1px solid gray;
+}
+
+#booking {
+    background-color: #a9d926;
+    border: 1px solid orange;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Nunito", Verdana, sans-serif;
+}
+
+h1 {
+    color:#1F3A52;
+    font-size: 54px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 10px;
+    font-weight: 800;
+    color: #a9d926;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 33px;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+p {
+    font-size: 12px;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #32506a;
+}
+
+#footer {
+    background-color: #1f3a52;
+    color: #fcfcfa;
+    border: 1px solid black;
+}
