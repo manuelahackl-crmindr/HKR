@@ -1,0 +1,98 @@
+header {
+    background: white;
+    border-bottom: 1px solid #e6e9ee;
+}
+
+main {
+    background-color: #f4f6f8;
+}
+
+span {
+    text-decoration: none;
+    background:linear-gradient(180deg,transparent 62%,#a9d926 62%);
+}
+
+.hero {
+    background: #edf6d2;
+    background:radial-gradient(120% 120% at 85% 0%,#edf6d2 0%,#ffffff 58%);
+}
+
+button {
+    color: #1F3A52;
+    border-radius: 10px;
+}
+
+.btn1 {  
+    background-color: #a9d926;
+}
+
+.btn2 {  
+    background-color: #fcfcfa;
+}
+
+#slider {
+    background: #dde0e7;
+}
+
+#timeline {
+}
+
+.boxed {
+    background-color: #1f3a52;
+}
+
+.highlight {
+    color: #fcfcfa;
+}
+
+.projects {
+    background-color: #edf6d2;
+}
+
+#me {
+}
+
+#booking {
+    background-color: #a9d926;
+    background:radial-gradient(100% 120% at 18% 0%,#eef3e4,#ffffff)}
+
+h1, h2, h3, h4 {
+    font-family: "Nunito", Verdana, sans-serif;
+
+}
+h1 {
+    color:#1F3A52;
+    font-size: 54px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 10px;
+    font-weight: 800;
+    color: #a9d926;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 33px;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+p, li {
+    font-size: 12px;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #32506a;
+}
+
+footer {
+    background-color: #1f3a52;
+    color: #fcfcfa;
+}
+
+li {list-style-type: disc;
+}
