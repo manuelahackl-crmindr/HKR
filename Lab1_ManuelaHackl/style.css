@@ -2,37 +2,67 @@
     margin: 0; padding: 0;
 }
 
-header {
-    background: white;
-    border-bottom: 1px solid #e6e9ee;
-    /*padding: 18px 52px;*/
+body {
+    font-family: "Nunito", Verdana, sans-serif;
 }
-.logo {
-    border: 1px solid green;
-    display: flex;
-    justify-content: flex-start;
 
+a {text-decoration: none;
+color: #1F3A52;}
+
+a:hover {
 }
-nav ul {border: 1px solid red;
+
+header {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    padding: 18px 52px;
+    border-bottom: 1px solid #e6e6e6;
+    align-content: flex-end;
+}
+
+.logo {
+}
+
+nav {
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap:28px;
+    align-self: flex-end;
 }
 
 nav li {
-    list-style-type: none;
-    margin: 3% 0 3% 5%;
+    margin: 0 0 0 15px;
 }
 
 main {
     background-color: #f4f6f8;
 }
 
+.hero {
+    background: #edf6d2;
+    background:radial-gradient(120% 120% at 85% 0%,#edf6d2 0%,#ffffff 58%);
+    padding:60px 52px 56px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero h2 {margin: 30px 0; }
+.hero p {max-width: 70%;
+        margin: 50px 0;
+}
+
+/**spans**/
+
 span {
     text-decoration: none;
     background:linear-gradient(180deg,transparent 62%,#a9d926 62%);
+    font-family: "Nunito", Verdana, sans-serif;
+
 }
 
 span.highlight {
@@ -41,25 +71,32 @@ span.highlight {
     background:linear-gradient(180deg,transparent 62%,#a9d926 62%);
 }
 
-.hero {
-    background: #edf6d2;
-    background:radial-gradient(120% 120% at 85% 0%,#edf6d2 0%,#ffffff 58%);
-    /*padding:60px 52px 56px;
-    position:relative;
-    overflow:hidden;*/
+.divider {
+    border-top: 1px solid #dde0e7;
+    margin: 10% 0;
 }
 
 /*Buttons*/
 
-button {
+button, input {
     color: #1F3A52;
+    border: 1px solid #dde0e7;
+    box-shadow: #dde0e7;
     border-radius: 10px;
     padding: 1.5% 3%;
+    text-wrap: nowrap;
 }
+
+button:hover {
+    background-color: #edf6d2;
+    border: 1px solid #a9d926;
+}
+
 
 .btn0 {
     background-color: #a9d926;
     margin: 0 0 0 0;
+    padding: 3%;
 }
 
 .btn1 {  
@@ -71,10 +108,26 @@ button {
     background-color: #fcfcfa;
 }
 
+input[type="submit" i] {
+    background-color: #a9d926;
+    max-width: 150px;
+    align-self: flex-end;
+}
+
+input[type="submit" i]:hover {
+    background-color: #edf6d2;
+    border: 1px solid #a9d926;
+}
+
+/**Logo Slider**/
+
 #slider {
     overflow: hidden;
     background: #dde0e7;
     white-space: nowrap;
+    padding: 22px 52px;
+    border-top: 1px solid #e6e9ee;
+    border-bottom: 1px solid #e6e9ee;  
 }
 
 #slider figure { 
@@ -99,11 +152,54 @@ button {
     }
 }
 
-.timeline {border: 2px solid green; 
+/**Cases/Projects
+#cases sytele defined in part "timeline"**/
+.projects {
+    background-color: #fcfcfc;
+    padding: 58px 52px;
+}
+
+.projects article {
+    background: #fcfcfc;;
+    width: 200px;
+    border: 1px solid #dde0e7;
+    border-radius: 10px;
+}
+
+.case {padding: 30px;}
+
+.projects figure img {
+    max-width: 200px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tags {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.lbl {
+    background: #f4f6f8;
+    border: 1px solid #dde0e7;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font: 800 10px Nunito, sans-serif;
+    padding: 4px 8px;
+    font-size: 8px;
+
+}
+
+/**timeline**/
+.timeline {
+    background-color: #1F3A52;
+    border-top: 1px solid #e6e6e6;
+    padding: 58px 52px;
 }
 
 .boxed {
-    background-color: #1f3a52;
+    overflow: hidden;
 }
 
 .highlight {
@@ -136,12 +232,7 @@ button {
     color: #dde0e7;
 }
 
-.projects {
-    background-color: #edf6d2;
-    border: 2px solid green;
-}
-
-#cases, #boxes, #caption {
+#cases, #boxes, #text {
     margin: 5% 0; 
     text-align:center;
     display: flex;
@@ -149,6 +240,10 @@ button {
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
+}
+
+#text {
+    margin: 5% 0 0;
 }
 
 #boxes {
@@ -169,19 +264,80 @@ button {
 
 }
 
-.projects article {
-    color: red;
-    border: 2px solid orange;
+
+/**About Me**/
+
+.me {
+    padding: 58px 52px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
 }
 
-#me {
+.me img {
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    border: 3px solid #a9d926;
+    margin-right: 100px; 
+    max-width: 500px;
+   }
+
+.me article {
+        max-width: 520px;
 }
 
-#booking {
-    background-color: #a9d926;
-    /*padding:58px 52px;*/
-    background:radial-gradient(100% 120% at 18% 0%,#eef3e4,#ffffff)
+
+/**Contact with form
+note: li sytle defined unter p**/
+.booking {
+    background: #edf6d2;
+    background:radial-gradient(120% 120% at 85% 0%,#edf6d2 0%,#ffffff 58%);
+    padding: 58px 52px;
 }
+
+
+#meetme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+ul {width: auto;}
+
+li {list-style-type: none;
+}
+
+.booking li::before {
+    content: "✓";
+    color: #a9d926;
+    margin-right: 2%;
+}
+
+form {color: #32506a; min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    background: #fcfcfc;
+    border: 1px solid #dde0e7;
+    border-radius: 10px;
+    min-height: 200%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 40px 60px; }
+
+fieldset {border: none; padding-bottom: 50px;}
+
+input {background-color: #edf6d2;}
+
+.booking article {    max-width: 500px;
+    min-width: 200px;}
+
 
 h1, h2, h3, h4 {
     font-family: "Nunito", Verdana, sans-serif;
@@ -203,23 +359,47 @@ h2 {
 h3 {
     font-size: 33px;
     font-weight: 800;
+    margin: 12px 0 16px;
 }
 
-h4 {
+h4, .kpi, .logo {
     font-size: 18px;
     font-weight: 800;
+    margin: 12px 0 16px;
 }
 
 p, li {
     font-size: 12px;
     font-family: Verdana, Tahoma, sans-serif;
     color: #32506a;
+    line-height: 150%;
+    max-width: 500px;
+    min-width: 80px;
 }
+
+p {line-height: 200%;
+margin-bottom: 5%;}
 
 footer {
     background-color: #1f3a52;
-    color: #fcfcfa;
+    color: #fcfcfc;
+    text-align: center;
+    padding: 40px 52px;
 }
 
-li {list-style-type: disc;
+footer li {
+    color: #fcfcfc;
+}
+
+footer ul {
+    justify-content: center;
+    margin-top: 5%;
+}
+
+nav.foot {
+}
+
+footer img {
+    width: 20px;
+    border-radius: 10px;
 }

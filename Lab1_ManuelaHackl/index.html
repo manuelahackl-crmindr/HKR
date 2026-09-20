@@ -11,18 +11,17 @@
 </head>
 <body>
     <header>
-        <nav>My Work As
+        <section class="logo">
+            My Work <span>As</span>
+        </section>
+        <nav>
             <ul>
-                <li>Service</li>
-                <li>Projects</li>
-                <li>About Me</li>
-
+                <li><a href="#section-cases">Projects</a></li>
+                <li><a href="#section-aboutme">About Me</a></li>
             </ul>
-            <ul>
-                <button class="btn0">Meet me</button>
-
-            </ul>
+            
         </nav>
+        <button class="btn0"><a href="section-meetme">Meet me</a></button>
     </header>
 
     <main>
@@ -31,10 +30,13 @@
             <h1>Manuela <br><span>Hackl</span></h1>
                 <h2>HubSpot · CRM · RevOps · Lifecycle Automation</h2>
                     <p>
-                    I build CRMs, pipelines, and lifecycle automations that turn data chaos into deals.<br>For SMBs, startups, and scaling sales teams.
+                    More than 20 Years in Sales and Digital Business has had its impact!
+                    <br>Since 2024 I am empowering businesses to take control over their data in HubSpot:
+                    <br>building CRMs, pipelines, and lifecycle automations that turn data chaos into deals.
+                    <br>For SMBs, startups, and scaling sales teams.
                     </p>
-            <button class="btn1">My Work</button>
-            <button class="btn2">Meet me</button>
+            <button class="btn1"><a href="#section-cases">My Work</a></button>
+            <button class="btn2"><a href="#section-experience">My Know-How</a></button>
         </section>
 
         <div id="slider">
@@ -64,17 +66,69 @@
             </figure>
         </div>
 
-    <section class="projects">
+    <section class="projects" id="section-cases">
         <h2>Projects</h2>
         <h3>Extract of some of my Work</h3>
         <div id="cases">
-        <article class="case">Case 1</article>
-        <article class="case">Case 2</article>
-        <article class="case">Case 3</article>
+        <article class="case">
+            <figure>
+                <img src="assets/memox_dashboard.PNG">
+            </figure>
+            <div class="tags">
+                <span class="lbl">reporting</span>
+                <span class="lbl">integrations</span>
+                <span class="lbl">marketing</span>
+                <span class="lbl">automations</span>
+            </div>
+            <h4>Digital Ads API &<br>custom Dashboards</h4>
+            <p> 
+API & webhook integrations • MS Azure app setup • automated custom objects & data sync • campaign setup • reporting & dashboard implemenation </p>
+                <div class="divider"></div>
+                    <span class="kpi">+100% Performance Insights</span>
+        </article>
+        <article class="case">
+            <figure>
+                <img src="assets/techstarter_workflow.png">
+            </figure>
+                        <div class="tags">
+                <span class="lbl">reporting</span>
+                <span class="lbl">integrations</span>
+                <span class="lbl">marketing</span>
+                <span class="lbl">automations</span>
+            </div>
+            <h4>Multi Hub Lifecycle<br>Automation & Communication</h4>
+            <p>completely automated Sales Funnel & pipeline 
+                • workflows • persona specific lead generation • 
+                sequences • marketing communication</p>
+                <div class="divider"></div>
+                    <span class="kpi">>-50% daily workload</span>
+        </article>
+        <article class="case">
+            <figure>
+                <img src="assets/memox_dashboard.PNG">
+            </figure>
+                <div class="tags">
+                <span class="lbl">reporting</span>
+                <span class="lbl">integrations</span>
+                <span class="lbl">marketing</span>
+                <span class="lbl">automations</span>
+            </div>
+            <h4>Multi Hub Lifecycle<br>
+                Automation & Communication</h4>
+                <p> Newsletter Marketing • Texting • Setup von Email-Newslettern 
+                    • Versandplanung   •  Auswertungen und Optimierungen • 
+                    Asset Management  •  Imlementierung eines neuen Newsletter Tools.</p>
+                <div class="divider"></div>
+                    <span class="kpi">+10% engagement rate</span>
+            </article>
         </div>
     </section>
 
-    <div id="me">
+    <section class="me" id="section-aboutme">
+            <figure>
+                <img src="assets/me_real.jpg">
+            </figure>
+        <article>
         <h2>About me</h2>
         <h4>Seaching for someone</h4>
         <h3>passionate for <span>data</span><br>
@@ -89,13 +143,14 @@
         <p>With more than 10 years of experience in sales and advertising, I help businesses unlock the full potential of HubSpot for sales, marketing and process automation. With a particular passion for enabling new tools and technologies that digitalise and enhance the customer relationship experience.
         </p>
         <h4>Find me on:</h4>
-        <button class="btn_malt">malt</button>
-        <button class="btn_freelancermap">Freelancermap</button>
-        <button class="btn_junico">Junico</button>
-        <button class="btn_linkedin">LinkedIn</button>
-    </div>
+        <button class="btn_malt"><a href="https://www.malt.de/profile/manuelahackl" target="_blank">malt</a></button>
+        <button class="btn_freelancermap"><a href="https://www.freelancermap.de/profil/manuela-hackl" target="_blank">Freelancermap</a></button>
+        <button class="btn_junico"><a href="https://www.junico.de/freelancer/manuela-33/" target="_blank">Junico</a></button>
+        <button class="btn_linkedin"><a href="https://www.linkedin.com/in/manuelahackl" target="_blank">Linkedin</a></button>
+        </article>
+    </section>
 
-    <section class="timeline">
+    <section class="timeline" id="section-experience">
         <div class="boxed">
             <h3 class="highlight">Timeline</h3>
         <div id="boxes">
@@ -116,66 +171,105 @@
                 <h4>CRM &<br>Automation</h4>
             </article>
         </div>
-        <div id="caption">
+        <div id="text">
             <article class="highlight">
-                <h4>20+ years</h4>
-                <p class="highlight">Test</p>
-            </article>
-            <article class="highlight">                <h4>10+ years</h4>
+                <h4><span>over 20</span> years</h4>
                 <p class="highlight">Test</p>
             </article>
             <article class="highlight">
-                <h4>10 years</h4>
+                <h4><span>over 10</span> years</h4>
+                <p class="highlight">Test</p>
+            </article>
+            <article class="highlight">
+                <h4><span>since 10</span> years</h4>
                 <p class="highlight">Test</p>
             </article>
                 <article class="highlight">
-                <h4>2+ years</h4>
+                <h4><span>since 2+</span> years</h4>
                 <p class="highlight">Test</p>
             </article>
         </div>
-        <p class="highlight">
-            Lorem ipsum dolor sit amet, <span class="highlight">consetetur sadipscing </span>elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        </p>
         </div>
     </section>
+    <div id="slider">
+            <figure>
+                <img src="assets/adjust.png">
+                <img src="assets/Google-Analytics.png">
+                <img src="assets/HubSpot.png">
+                <img src="assets/zoho.png">
+                <img src="assets/Meta-Logo.png">
+                <img src="assets/Bing_Ads.png">
+                <img src="assets/mailchimp.png">
+                <img src="assets/make.png">
+                <img src="assets/N8n.png">
+                <img src="assets/zapier.png">
+                <img src="assets/github.png">
+                <img src="assets/Microsoft_Azure.png">
+                <img src="assets/Power-Bi.png">
+            </figure>
+            <figure>
+                <img src="assets/adjust.png">
+                <img src="assets/Google-Analytics.png">
+                <img src="assets/HubSpot.png">
+                <img src="assets/zoho.png">
+                <img src="assets/Meta-Logo.png">
+                <img src="assets/Bing_Ads.png">
+                <img src="assets/mailchimp.png">
+                <img src="assets/make.png">
+                <img src="assets/N8n.png">
+                <img src="assets/zapier.png">
+                <img src="assets/github.png">
+                <img src="assets/Microsoft_Azure.png">
+                <img src="assets/Power-Bi.png">
+            </figure>
+        </div>
 
-    <div id="booking">
-        <h2 class="highlight">Meet me</h2>
-        <h3>Let's collaborate to thrive!<!--Alternative: A short chat, a clear, next step--></h3>
-        <p>
-        I am happy to have a chat an see how I can support your work with your CRM in detail.
-        </p>
-        <ul class="highlight">
+    <section class="booking" id="section-meetme">
+            <h2>Meet me</h2>
+            <h3>Let's collaborate to thrive!<!--Alternative: A short chat, a clear, next step--></h3>
+        <div id="meetme">
+        <article>
+            <ul class="highlight">
             <li>Video, 30 minutes & free</li>
             <li>2 to 3 starting points</li>
             <li>In German, English or Italian</li>
         </ul>
-
-    </div>
+        </article>
+        <form>
+            <label for="name">Your name:</label>
+                <input type="text" name="name" id="name" required /><br>
+            <label for="email">Your email:</label>
+                <input type="email" name="email" id="email" required /><br>
+            <fieldset>
+                <label>
+                    <input type="radio" name="radio" value="yes" /><span>I agree</span> to use my data</label>
+            </fieldset>
+                <input type="submit" value="Submit" />
+            
+        </form>
+        </div>
+    </section>
     </main>
 
     <footer>
-        <p class="highlight">
-        (c) Manuela Hackl, 2026<br>
-        Ein Freelance-HubSpot-Service von Manuela Hackl — Sales-Prozesse, Lifecycle-Automation, RevOps.<br>
-        Ebertplatz<br>
-        Constance, Germany
-        </p>
-        <nav>
-            <ul class="highlight">
+        © Manuela Hackl, 2026<br>
+        <h2>HubSpot · CRM · RevOps · Lifecycle Automation</h2>
+        Ebertplatz, Constance, Germany
+        <section class="foot">
+            <figure>
+            <img src="assets/icon_linkedin.png"><a href="https://www.linkedin.com/in/manuelahackl" target="_blank">
+            <img src="assets/icon_malt.png"><a href="https://www.malt.de/profile/manuelahackl" target="_blank">
+            <img src="assets/icon_junico.png"><a href="https://www.junico.de/freelancer/manuela-33/" target="_blank">
+            <img src="assets/icon_freelancermap.png"><a href="https://www.freelancermap.de/profil/manuela-hackl" target="_blank">
+            </figure>
+            <nav class="foot">
+            <ul>
                 <li>Impressum</li>
                 <li>GTC & data</li>
                 <li>About Me</li>
-                <button class="btn1">Meet me</button>
             </ul>
-        </nav>
-        <div id=""socials">
-            <button class="btn_malt">malt</button>
-            <button class="btn_freelancermap">Freelancermap</button>
-            <button class="btn_junico">Junico</button>
-            <button class="btn_linkedin">LinkedIn</button>
-        </div>
+            </nav>
+        </section>
     </footer>
-    
 </body>
 </html>
