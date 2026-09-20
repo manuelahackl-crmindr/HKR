@@ -121,7 +121,14 @@ input[type="submit" i]:hover {
 
 /**Logo Slider**/
 
-#slider {
+#sliders_logo {
+    display: flex;
+    width: max-content;
+    animation: slider 30s linear infinite;
+    flex-wrap: nowrap;
+}
+
+.slider {
     overflow: hidden;
     background: #dde0e7;
     white-space: nowrap;
@@ -130,15 +137,19 @@ input[type="submit" i]:hover {
     border-bottom: 1px solid #e6e9ee;  
 }
 
-#slider figure { 
-    display: inline-block;
-    animation: 30s slide infinite linear;
-    animation-name: slider;
+#sliders_logo figure { 
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+
     
 }
 
-#slider figure img {
-    margin: 2%;
+.slider figure img {
+    flex-shrink: 0;
+    display: block;
+    margin: 0 50px;
     height: 30px;
     width: auto;
 }
@@ -148,7 +159,7 @@ input[type="submit" i]:hover {
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
@@ -385,6 +396,7 @@ footer {
     color: #fcfcfc;
     text-align: center;
     padding: 40px 52px;
+    margin-top: 200px;
 }
 
 footer li {
