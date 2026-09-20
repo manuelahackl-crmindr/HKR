@@ -4,10 +4,13 @@
 
 body {
     font-family: "Nunito", Verdana, sans-serif;
+    background-color: #fcfcfc;
 }
 
-a {text-decoration: none;
-color: #1F3A52;}
+a {
+    text-decoration: none;
+    color: #1F3A52;
+}
 
 a:hover {
 }
@@ -51,18 +54,20 @@ main {
     overflow:hidden;
 }
 
-.hero h2 {margin: 30px 0; }
-.hero p {max-width: 70%;
-        margin: 50px 0;
+.hero h2 {
+    margin: 30px 0;
+}
+
+.hero p {
+    max-width: 70%;
+    margin: 50px 0;
 }
 
 /**spans**/
-
 span {
     text-decoration: none;
     background:linear-gradient(180deg,transparent 62%,#a9d926 62%);
     font-family: "Nunito", Verdana, sans-serif;
-
 }
 
 span.highlight {
@@ -77,7 +82,6 @@ span.highlight {
 }
 
 /*Buttons*/
-
 button, input {
     color: #1F3A52;
     border: 1px solid #dde0e7;
@@ -120,7 +124,6 @@ input[type="submit" i]:hover {
 }
 
 /**Logo Slider**/
-
 #sliders_logo {
     display: flex;
     width: max-content;
@@ -177,7 +180,9 @@ input[type="submit" i]:hover {
     border-radius: 10px;
 }
 
-.case {padding: 30px;}
+.case {
+    padding: 30px;
+}
 
 .projects figure img {
     max-width: 200px;
@@ -199,7 +204,6 @@ input[type="submit" i]:hover {
     font: 800 10px Nunito, sans-serif;
     padding: 4px 8px;
     font-size: 8px;
-
 }
 
 /**timeline**/
@@ -272,12 +276,10 @@ input[type="submit" i]:hover {
     right: 15%;
     width: 70%;
     border-top: 2px dashed #a9d926;
-
 }
 
 
 /**About Me**/
-
 .me {
     padding: 58px 52px;
     border-top: 1px solid #e6e6e6;
@@ -286,7 +288,6 @@ input[type="submit" i]:hover {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    
 }
 
 .me img {
@@ -296,7 +297,7 @@ input[type="submit" i]:hover {
     border: 3px solid #a9d926;
     margin-right: 100px; 
     max-width: 500px;
-   }
+}
 
 .me article {
         max-width: 520px;
@@ -309,8 +310,8 @@ note: li sytle defined unter p**/
     background: #edf6d2;
     background:radial-gradient(120% 120% at 85% 0%,#edf6d2 0%,#ffffff 58%);
     padding: 58px 52px;
+    padding-bottom: 200px; 
 }
-
 
 #meetme {
     display: flex;
@@ -319,9 +320,12 @@ note: li sytle defined unter p**/
     align-items: baseline;
 }
 
-ul {width: auto;}
+ul {
+    width: auto;
+}
 
-li {list-style-type: none;
+li {
+    list-style-type: none;
 }
 
 .booking li::before {
@@ -330,7 +334,9 @@ li {list-style-type: none;
     margin-right: 2%;
 }
 
-form {color: #32506a; min-width: 50%;
+form {
+    color: #32506a; 
+    min-width: 50%;
     display: flex;
     flex-direction: column;
     background: #fcfcfc;
@@ -340,20 +346,25 @@ form {color: #32506a; min-width: 50%;
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    padding: 40px 60px; }
+    padding: 40px 60px;
+}
 
-fieldset {border: none; padding-bottom: 50px;}
+fieldset {
+    border: none; 
+    padding-bottom: 50px;
+}
 
 input {background-color: #edf6d2;}
 
-.booking article {    max-width: 500px;
-    min-width: 200px;}
-
+.booking article {
+    max-width: 500px;
+    min-width: 200px;
+}
 
 h1, h2, h3, h4 {
     font-family: "Nunito", Verdana, sans-serif;
-
 }
+
 h1 {
     color:#1F3A52;
     font-size: 54px;
@@ -396,7 +407,6 @@ footer {
     color: #fcfcfc;
     text-align: center;
     padding: 40px 52px;
-    margin-top: 200px;
 }
 
 footer li {
@@ -415,3 +425,138 @@ footer img {
     width: 20px;
     border-radius: 10px;
 }
+
+/* I. Desktop END
+---------------------*/
+
+
+
+/*-------------------
+II. Tablet START-----*/
+
+@media screen and (max-width: 768px) {
+button, input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    font-size: x-large;
+}
+
+#meetme {
+    flex-direction: column;
+}
+
+form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: auto;
+    min-width: 10px;
+ }
+
+ #cases, #boxes {
+    flex-direction: column;
+}
+
+#cases p {
+    display: none;
+}
+#text {
+    visibility: hidden;
+}
+
+#boxes article {
+    margin-top: 10%;
+}
+
+#boxes::after {
+    visibility: hidden;
+}
+
+.booking article {margin-top: 100px;}
+
+.me {
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    align-items: baseline;
+    align-content: flex-end;
+    justify-content: flex-start;
+    white-space: pre-wrap;
+}
+
+input[type="radio" i] {
+    background-color: #a9d926; 
+    margin-right: 10px; }
+}
+
+/*-----------------
+II. Tablet END-----*/
+
+
+/* III. Mobile START
+-------------------*/
+@media screen and (max-width: 350px) {
+button, input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    font-size: x-large;
+}
+
+#meetme {
+    flex-direction: column;
+}
+
+form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: auto;
+    min-width: 10px;
+ }
+
+ #cases, #boxes {
+    flex-direction: column;
+}
+
+#cases p {
+    display: none;
+}
+#text {
+    visibility: hidden;
+}
+
+#boxes article {
+    margin-top: 10%;
+}
+
+#boxes::after {
+    visibility: hidden;
+}
+
+.booking article {margin-top: 100px;}
+
+.me {
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    align-items: baseline;
+    align-content: flex-end;
+    justify-content: flex-start;
+    white-space: pre-wrap;
+}
+
+input[type="radio" i] {
+    background-color: #a9d926; 
+    margin-right: 10px; }
+}
+
+/* ----III. Mobile END
+-----------------------*/
+
+
