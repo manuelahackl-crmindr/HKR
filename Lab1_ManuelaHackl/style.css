@@ -27,6 +27,14 @@ header {
     align-content: flex-end;
 }
 
+ul {
+    width: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
 h1, h2, h3, h4 {
     font-family: "Nunito", Verdana, sans-serif;
 }
@@ -280,6 +288,8 @@ figcaption {
     margin-bottom: 50px;
 }
 
+/*Projects & Portfolio*/
+
 .projects figure img {
     max-width: 200px;
     height: 100px;
@@ -300,7 +310,40 @@ figcaption {
     font: 800 10px Nunito, sans-serif;
     padding: 4px 8px;
     font-size: 8px;
+
+    
 }
+
+.grid-gallery {
+       height: 100%;
+     padding: 58px 52px;
+     background: #dde0e7;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#gallery {
+   min-height: 700px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-auto-rows: 200px;
+    grid-template-flow: column;
+    justify-content: center;
+    grid-gap: 5%;
+    margin: 5%;
+}
+
+#gallery div {
+    
+}
+
+
+
+#gallery img {width: 200px; height: 200px;
+object-fit:cover;
+object-position: left top;}
+
+
 
 /**timeline**/
 .timeline {
@@ -444,14 +487,6 @@ note: li sytle defined unter p**/
     align-items: baseline;
 }
 
-ul {
-    width: auto;
-}
-
-li {
-    list-style-type: none;
-}
-
 .booking li::before, .me li::before {
     content: "✓";
     color: #a9d926;
@@ -518,7 +553,7 @@ footer img {
 /*-------------------
 II. Tablet START-----*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px/*768px*/) {
 button, input {
     display: flex;
     flex-direction: column;
@@ -584,6 +619,17 @@ input[type="radio" i] {
     object-fit: contain;
 }
 
+/*Grid Tablet*/
+.grid-gallery {
+
+}
+
+#gallery {
+
+    grid-template-columns: repeat(2, 200px);
+    grid-auto-rows: 200px;
+}
+
 }
 
 /*-----------------
@@ -592,7 +638,7 @@ II. Tablet END-----*/
 
 /* III. Mobile START
 -------------------*/
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 700px) {
 button, input {
     display: flex;
     flex-direction: column;
@@ -773,6 +819,36 @@ input[type="radio" i] {
     0%, 7.5% {opacity: 1;}
     7.6%, 100% {opacity: 0;}
 }
+
+/*Grid Mobile*/
+.grid-gallery {
+       height: 1800px;
+     padding: 58px 52px;
+     background: #dde0e7;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#gallery {
+    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(1, 200px);
+    grid-gap: 1%;
+    display: grid;
+    justify-content:center;
+    margin: 0%;
+    padding: 0%;
+}
+
+#gallery div {
+    
+}
+
+
+
+#gallery img {width: 200px; height: 200px;
+object-fit:cover;
+object-position: left top;}
+
 }
 
 /* ----III. Mobile END
