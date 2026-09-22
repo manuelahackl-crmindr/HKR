@@ -14,7 +14,14 @@ a {
     color: #1F3A52;
 }
 
-a:hover {
+a:hover {color: #a9d926;
+}
+
+a[aria-current="page"] {
+    text-decoration: underline solid #a9d926 10px;
+    text-underline-offset: -2.5px;
+    text-decoration-skip-ink: none; 
+    font-weight: bold;
 }
 
 header {
@@ -69,15 +76,22 @@ p, li {
     font-family: Verdana, Tahoma, sans-serif;
     color: #32506a;
     line-height: 150%;
-    max-width: 500px;
     min-width: 80px;
 }
 
-p {line-height: 200%;
-margin-bottom: 5%;}
+p {
+    line-height: 200%;
+    margin-bottom: 5%;
+}
+
+small {
+    font: 6px italic;
+    color: #dde0e7;
+    text-align: right;
+    font-family: Verdana, Tahoma, sans-serif;
+}
 
 /*Head & Hero Section*/
-
 .logo {
 }
 
@@ -99,6 +113,12 @@ main {
     background-color: #f4f6f8;
 }
 
+.only-text {
+    border-top: 1px solid #dde0e7;
+    border-bottom: 1px solid #dde0e7;
+    padding: 58px 52px;
+}
+
 .hero, .hero-pages {
     background: #edf6d2;
     background:radial-gradient(120% 120% at 85% 0%,#edf6d2 0%,#ffffff 58%);
@@ -113,7 +133,6 @@ main {
 
 .hero-pages h2 {margin: 30px 0;}
 
-
 .hero p {
     max-width: 70%;
     margin: 50px 0;
@@ -124,6 +143,10 @@ span {
     text-decoration: none;
     background:linear-gradient(180deg,transparent 62%,#a9d926 62%);
     font-family: "Nunito", Verdana, sans-serif;
+}
+
+p span {
+    font-family: Verdana, sans-serif;
 }
 
 span.highlight {
@@ -138,7 +161,7 @@ span.highlight {
 }
 
 /*Buttons*/
-button, input {
+button, input, #message {
     color: #1F3A52;
     border: 1px solid #dde0e7;
     box-shadow: #dde0e7;
@@ -201,8 +224,6 @@ input[type="submit" i]:hover {
     flex-direction: row;
     flex-shrink: 0;
     align-items: center;
-
-    
 }
 
 .top-slider figure img, .bottom-slider figure img {
@@ -250,9 +271,7 @@ input[type="submit" i]:hover {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-
 }
-
 
 #cases {
     align-items: flex-start;
@@ -273,11 +292,15 @@ input[type="submit" i]:hover {
 
 
 .case {
+    padding: 30px;  
+    margin-bottom: 20px;
 
 }
 
-figcaption {
-        padding: 30px;    
+figcaption {color: #1F3A52}
+  
+#gallery small {
+    color: #a9d926;
 }
 
 .label-me {
@@ -310,8 +333,6 @@ figcaption {
     font: 800 10px Nunito, sans-serif;
     padding: 4px 8px;
     font-size: 8px;
-
-    
 }
 
 .grid-gallery {
@@ -323,27 +344,30 @@ figcaption {
 }
 
 #gallery {
-   min-height: 700px;
+    background-color: #fcfcfc;  
+    border: 1px solid #dde0e7; 
+    border-radius: 10px;
+    min-height: 1300px;
     display: grid;
     grid-template-columns: repeat(3, 200px);
     grid-auto-rows: 200px;
     grid-template-flow: column;
     justify-content: center;
-    grid-gap: 5%;
+    grid-row-gap: 15%;
     margin: 5%;
+    padding-top: 10%;    
+    grid-column-gap: 5%;
 }
+
+
 
 #gallery div {
     
 }
 
-
-
 #gallery img {width: 200px; height: 200px;
 object-fit:cover;
 object-position: left top;}
-
-
 
 /**timeline**/
 .timeline {
@@ -463,11 +487,14 @@ display: flex;
     display: inline-block;
     border: 3px solid #a9d926;
     margin-right: 100px; 
-    max-width: 500px;
+    width: 250px;
+    height: 250px;
+    object-fit:cover;
+    object-position:center;
 }
 
 .me article {
-        max-width: 520px;
+    max-width: 520px;
 }
 
 
@@ -513,7 +540,7 @@ fieldset {
     padding-bottom: 50px;
 }
 
-input {background-color: #edf6d2;}
+input, #message {background-color: #edf6d2;}
 
 .booking article {
     max-width: 500px;
@@ -522,19 +549,20 @@ input {background-color: #edf6d2;}
 
 /*Footer*/
 footer {
-    background-color: #1f3a52;
+    background-color: #1F3A52;
     color: #fcfcfc;
     text-align: center;
     padding: 40px 52px;
 }
 
-footer li {
+footer li, .foot a {
     color: #fcfcfc;
 }
 
 footer ul {
     justify-content: center;
     margin-top: 5%;
+    color: white;
 }
 
 nav.foot {
@@ -554,7 +582,7 @@ footer img {
 II. Tablet START-----*/
 
 @media screen and (max-width: 1000px/*768px*/) {
-button, input {
+button, input, #message {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -575,7 +603,10 @@ form {
 
  #cases, #boxes {
     flex-direction: column;
+
 }
+
+.case {margin-bottom: 5%;}
 
 #cases p {
     display: none;
@@ -597,7 +628,7 @@ form {
 .me {
     flex-direction: column;
 }
-
+.case figure {margin-top: 20px;}
 label {
     display: flex;
     align-items: baseline;
@@ -620,12 +651,11 @@ input[type="radio" i] {
 }
 
 /*Grid Tablet*/
-.grid-gallery {
+.grid-gallery { height: 2200px;
 
 }
 
 #gallery {
-
     grid-template-columns: repeat(2, 200px);
     grid-auto-rows: 200px;
 }
@@ -647,8 +677,32 @@ button, input {
     font-size: x-large;
 }
 
-#meetme {
+header {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 18px 52px;
+    border-bottom: 1px solid #e6e6e6;
+    align-content: flex-end;}
+
+nav ul {
+    flex-direction: column; 
+    font-size: large;}
+
+nav li {
+    font-size: 16px;
+    background-color: #dde0e7;
+    padding: 10% 15%; 
+    text-wrap: nowrap;
+border-radius: 10px;;}
+
+.logo {align-self:center;}
+
+
+.btn0 {visibility: hidden;}
+
+
+#meetme {
 }
 
 form {
@@ -658,7 +712,6 @@ form {
     min-width: 10px;
     max-width: 100%;
     box-sizing: border-box;
-    
  }
 
  #cases, #boxes {
@@ -698,6 +751,8 @@ input[type="radio" i] {
     width: auto;
     vertical-align: middle;
 }
+
+.case {margin-bottom: 5%;}
 
 /**Logo Slider mobile: 1 Logo for 3 seconds, automatic sliding**/
 .top-slider, .bottom-slider {
@@ -822,7 +877,7 @@ input[type="radio" i] {
 
 /*Grid Mobile*/
 .grid-gallery {
-       height: 1800px;
+       height: 2500px;
      padding: 58px 52px;
      background: #dde0e7;
     border-top: 1px solid #e6e6e6;
@@ -832,18 +887,21 @@ input[type="radio" i] {
 #gallery {
     grid-template-rows: repeat(3, 200px);
     grid-template-columns: repeat(1, 200px);
-    grid-gap: 1%;
+    grid-gap: 3%;
     display: grid;
     justify-content:center;
     margin: 0%;
     padding: 0%;
+    height: 2450px;
 }
 
+
+#gallery figcaption {visibility: hidden;}
 #gallery div {
     
 }
 
-
+.timeline {max-height: 800px;}
 
 #gallery img {width: 200px; height: 200px;
 object-fit:cover;

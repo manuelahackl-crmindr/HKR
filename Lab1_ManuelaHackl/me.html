@@ -11,22 +11,22 @@
 </head>
 <body>
     <header>
-        <section class="logo">
-        My Work <span>As</span>
+        <section class="logo"><a href="index.html">
+        My Work <span>As</span></a>
         </section>
         <nav>
             <ul>
-                <li><a href="#section-cases">Projects</a></li>
-                <li><a href="#section-aboutme">About Me</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="me.html" aria-current="page">About Me</a></li>
             </ul>
         </nav>
-        <button class="btn0"><a href="section-meetme">Meet me</a></button>
+        <button class="btn0"><a href="#section-meetme">Meet me</a></button>
     </header>
 
     <main>
         <section class="hero-pages">
             <h2>About me</h2>
-            <h1><span>Understanding</span> Sales, Marketing & CRM</h1><br>
+            <h1><span>Understanding</span> then automating</h1><br>
                 <!--button class="btn1"><a href="#section-cases">My Work</a></button>
                 <button class="btn2"><a href="#section-experience">My Know-How</a></button-->
         </section>
@@ -62,7 +62,7 @@
 
     <section class="me" id="section-aboutme">
             <figure>
-                <img src="assets/me_real.jpg">
+                <img src="assets/desk1.jpg">
                 <figcaption class="label-me">
                     <div class="tags">
                     <span class="lbl">Remote</span>
@@ -79,11 +79,9 @@
             </figure>
             <article>
                 <h2>Hi, this is me</h2>
-                <h4>Seaching for someone</h4>
-                <h3>passionate for <span>data</span><br>
-                thinking in <span>Workflows</span><br>
-                and <span>problem-solving</span>?</h3>
-                <h4>Hi, that's me!</h4>
+        
+                <h3><span>Understanding</span> Sales, Marketing & CRM</h3>
+
                     <p>I started out in media sales, later built sales teams 
                         and took on responsibility for marketing. Throughout 
                         my career, I kept seeing the same thing: 
@@ -301,19 +299,31 @@
             <div id="text">
                 <article class="highlight">
                     <h4><span>over 20</span> years</h4>
-                        <p class="highlight">Test</p>
+                        <p class="highlight">I started in digital media,
+                            <br>working at the intersection <br>of clients, campaigns <br>
+                            and digital platforms. This taught me<br>
+                            how to turn business objectives <br>into digital solutions.</p>
                 </article>
                 <article class="highlight">
                     <h4><span>over 10</span> years</h4>
-                    <p class="highlight">Test</p>
+                    <p class="highlight">Moving into digital sales<br> 
+                        shifted my perspective <br> from delivering campaigns 
+                        <br> to building sustainable <br> client relationships. 
+                        </p>
                 </article>
                 <article class="highlight">
                     <h4><span>since 10</span> years</h4>
-                    <p class="highlight">Test</p>
+                     <p class="highlight">With marketing,<br>
+                        I moved closer to the full <br>customer journey.<br>Projects
+                        taught me to connect <br>creative ideas with measurable <br>business objectives.
+                        </p>
                 </article>
                     <article class="highlight">
                     <h4><span>since 2+</span> years</h4>
-                    <p class="highlight">Test</p>
+                    <p class="highlight">The recurring challenge<br> became clear: valuable <br>
+                        sales time was being lost to manual processes, <br>
+                        disconnected data and repetitive tasks. 
+                        <br>I moved into CRM and automation <br>to solve exactly that!</p>
                 </article>
             </div>
         </article>
@@ -487,14 +497,18 @@
                     <li>In German, English or Italian</li>
                 </ul>
             </article>
-            <form>
+            <form action="https://formsubmit.co/manu@manuelahackl.de" method="POST">
                 <label for="name">Your name:</label>
                     <input type="text" name="name" id="name" required /><br>
                 <label for="email">Your email:</label>
                     <input type="email" name="email" id="email" required /><br>
+                    <label for="subject">Subject:</label>
+                    <input type="text" name="subject" id="subject"/><br>
+                     <label for="message">Your message:</label>
+                    <textarea name="message" id="message" rows="10"></textarea><br>
                 <fieldset>
                     <label>
-                        <input type="radio" name="radio" value="yes" /><span>I agree </span>to use my data</label>
+                        <input type="radio" name="radio" value="yes" /><span> I agree </span>to use my data</label>
                 </fieldset>
                     <input type="submit" value="Submit" />
                 
@@ -516,9 +530,9 @@
                 </figure>
                 <nav class="foot">
                     <ul>
-                        <li>Impressum</li>
-                        <li>GTC & data</li>
-                        <li>About Me</li>
+                        <li class=""highlight><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="data.html">GTC & data</a></li>
+                        <li><a href="me.html">About Me</a></li>
                     </ul>
                 </nav>
         </section>

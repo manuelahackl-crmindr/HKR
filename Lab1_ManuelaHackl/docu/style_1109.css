@@ -17,10 +17,6 @@ span {
 .hero {
     background: #edf6d2;
     border: 1px solid green;
-    /*background:radial-gradient(120% 120% at 85% 0%,#edf6d2 0%,#ffffff 58%);
-    padding:60px 52px 56px;
-    position:relative;
-    overflow:hidden;*/
 }
 
 button {
