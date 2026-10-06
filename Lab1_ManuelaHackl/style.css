@@ -793,7 +793,19 @@ border-top: 1px solid #dde0e7;
 .hero-pages {border-top: 1px solid #dde0e7;}
 
 
-.logo {font-size: large;}
+.logo {
+    align-self:center;
+      align-self:center;
+    font-size: large;
+
+}
+
+.logo a:hover {color: none;}
+
+.btn0 {display: none;}
+
+.btn1, .btn2 {width: 100%; padding: 15px;}
+
 
 .logo a:hover {color: none;}
 
@@ -811,11 +823,6 @@ nav li a:hover {color: #1F3A52;}
 a[aria-current="page"] {text-decoration: none;}
 
 
-.logo {align-self:center;}
-
-
-.btn0 {display: none;}
-
 
 #cases, #boxes {
     flex-direction: column;
@@ -827,6 +834,11 @@ a[aria-current="page"] {text-decoration: none;}
 #text {
     display: none;
 }
+
+
+  #case article, .case {border: 1px solid red; min-height: none; height: auto; }
+
+
 
 #boxes article {
     margin-top: 10%;
