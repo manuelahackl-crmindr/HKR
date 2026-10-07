@@ -4,6 +4,8 @@
 
 /*Basics*/
 
+
+
 body {
     font-family: "Nunito", Verdana, sans-serif;
     background-color: #fcfcfc;
@@ -594,12 +596,14 @@ form {
     padding: 40px 60px;
 }
 
+ .errortext {color: rgba(241, 115, 11, 0.815); font-size: 11px;}
+
 fieldset {
     border: none; 
     padding-bottom: 50px;
 }
 
-input, #message {background-color: #edf6d2;}
+input, #message, select {background-color: #edf6d2;}
 
 .booking article {
     max-width: 500px;
@@ -898,6 +902,7 @@ form {
     min-width: 10px;
     box-sizing: border-box;
  }
+
 
  
 #message {

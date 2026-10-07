@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <script src="script.js" />
 
 </head>
 <body>
@@ -22,7 +21,7 @@
                 <li><a href="me.html">About Me</a></li>
             </ul>
         </nav>
-        <button class="btn0"><a href="#section-meetme">Meet me</a></button>
+        <button class="btn0" id="btn0"><!--a href="#section-meetme"-->Meet me<!--/a--></button>
     </header>
 
     <main>
@@ -254,17 +253,17 @@
                     <li>In German, English or Italian</li>
                 </ul>
             </article>
-            <form action="https://formsubmit.co/manu@manuelahackl.de" method="POST">
+            <form id="FormBottom" action="https://formsubmit.co/manu@manuelahackl.de" method="POST">
                 <label for="name">Your name:</label>
                     <input type="text" name="name" id="name" required /><br>
                 <label for="email">Your email:</label>
                     <input type="email" name="email" id="email" required /><br>
                 <fieldset>
                     <label>
-                        <input type="radio" name="radio" value="yes" /><span>I agree </span>to use my data</label>
+                    <input type="radio" name="radio" value="yes" /><span>I agree </span>to use my data</label>
                 </fieldset>
                     <input type="submit" value="Submit" />
-                
+                <p id="FormError"></p>
             </form>
         </div>
     </section>
@@ -291,4 +290,5 @@
         </section>
     </footer>
 </body>
+    <script src="script.js"></script>
 </html>

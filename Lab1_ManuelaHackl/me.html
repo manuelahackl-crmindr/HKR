@@ -512,19 +512,39 @@
                     <li>In German, English or Italian</li>
                 </ul>
             </article>
-            <form action="https://formsubmit.co/manu@manuelahackl.de" method="POST">
-                <label for="name">Your name:</label>
-                    <input type="text" name="name" id="name" required /><br>
+            <form id="FormBottom" action="https://formsubmit.co/manu@manuelahackl.de" method="POST">
+                
+                <label for="name">Your full name:</label>
+                    <input type="text" name="name" id="name" required />
+                        <p id="error-name" class="errortext"></p>
+
                 <label for="email">Your email:</label>
-                    <input type="email" name="email" id="email" required /><br>
-                    <label for="subject">Subject:</label>
-                    <input type="text" name="subject" id="subject"/><br>
-                     <label for="message">Your message:</label>
-                    <textarea name="message" id="message" rows="10"></textarea><br>
+                    <input type="text" name="email" id="email" required />
+                        <p id="error-name" class="errortext"></p>
+
+                <label for="website">Your website:</label>
+                    <input type="text" name="web" id="web" />
+                        <p id="error-name" class="errortext"></p>
+
+                    <label for="subject">Topic of Interest:</label>
+                    <select type="select" name="subject" id="subject" required>
+                            <option value="mercedes">Work Request</option>
+                            <option value="saab">Contact me</option>
+                            <option value="mercedes">Urgent CRM fix</option>
+                            <option value="audi">Fees & Conditions</option>
+                    </select>
+                        <p id="error-subject" class="errortext"></p>
+
+                     <label for="message">Comments:</label>
+                    <textarea name="message" id="message" rows="10" required></textarea>
+                        <p id="error-message" class="errortext"></p>
+
                 <fieldset>
                     <label>
-                        <input type="radio" name="radio" value="yes" /><span> I agree </span>to use my data</label>
+                        <input type="radio" name="radio" value="yes" required/><span> I agree </span>to use my data</label>
+                            <p id="error-data" class="errortext">Error</p>
                 </fieldset>
+
                     <input type="submit" value="Submit" />
                 
             </form>
@@ -553,4 +573,5 @@
         </section>
     </footer>
 </body>
+    <script src="script.js"></script>
 </html>
