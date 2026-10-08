@@ -180,7 +180,7 @@ button, input, #message, select {
     color: #1F3A52;
     border: 1px solid #dde0e7;
     border-radius: 10px;
-    padding: 1.5% 3%;
+    padding: 15px 20px;
     text-wrap: nowrap;
     font-size: 13px;
 }
@@ -225,11 +225,26 @@ button:hover {
     background-color: #fcfcfa;
 }
 
+.btncontact {align-self: flex-end;}
+
 input[type="submit" i] {
     background-color: #a9d926;
     max-width: 150px;
-    align-self: flex-end;
+
 }
+
+input.btn3[type="submit" i] {
+    background-color: #edf6d2;
+    max-width: 150px;
+
+}
+
+input.btn3[type="submit" i]:hover {
+    background-color: #a9d926;
+    max-width: 150px;
+
+}
+
 
 input[type="submit" i]:hover {
     background-color: #edf6d2;

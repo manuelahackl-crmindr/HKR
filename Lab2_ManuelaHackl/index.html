@@ -254,16 +254,33 @@
                 </ul>
             </article>
             <form id="FormBottom" action="https://formsubmit.co/manu@manuelahackl.de" method="POST">
-                <label for="name">Your name:</label>
-                    <input type="text" name="name" id="name" required /><br>
-                <label for="email">Your email:</label>
-                    <input type="email" name="email" id="email" required /><br>
-                <fieldset>
-                    <label>
-                    <input type="radio" name="radio" value="yes" /><span>I agree </span>to use my data</label>
-                </fieldset>
+                
+                <label for="name">Your full name:*</label>
+                    <input type="text" name="name" id="name" required />
+                        <p id="countname" class="count">Min. of 2 characters required</p>
+                        <p id="error-name" class="errortext"></p>
+                        
+
+                <label for="email">Your email:*</label>
+                    <input type="text" name="email" id="email" required />
+                        <p id="error-email" class="errortext"></p>
+                   
+                    <label for="message">Comments:*</label>
+                    <textarea name="message" id="message" rows="10" required></textarea>
+                        <p id="countcomments" class="count">Min. of 15 characters required</p>
+                        <p id="error-message" class="errortext"></p>
+               
+                    <fieldset>
+                        <label>
+                           <input type="radio" name="radio" id="radio" value="yes" required/> <span>I agree </span>to use my data*
+                        </label>
+                    </fieldset>
+                    
+                <div class="btncontact">
+                    <input type="submit" value="Clear" class="btn3"/>
                     <input type="submit" value="Submit" />
-                <p id="FormError"></p>
+                </div>
+                <p class="count">*Field is required</p>
             </form>
         </div>
     </section>

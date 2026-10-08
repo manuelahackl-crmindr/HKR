@@ -514,13 +514,13 @@
             </article>
             <form id="FormBottom" action="https://formsubmit.co/manu@manuelahackl.de" method="POST">
                 
-                <label for="name">Your full name:</label>
+                <label for="name">Your full name:*</label>
                     <input type="text" name="name" id="name" required />
                         <p id="countname" class="count">Min. of 2 characters required</p>
                         <p id="error-name" class="errortext"></p>
                         
 
-                <label for="email">Your email:</label>
+                <label for="email">Your email:*</label>
                     <input type="text" name="email" id="email" required />
                         <p id="error-email" class="errortext"></p>
 
@@ -528,7 +528,7 @@
                     <input type="text" name="web" id="web" />
                         <p id="error-web" class="errortext"></p>
 
-                    <label for="subject">Topic of Interest:</label>
+                    <label for="subject">Topic of Interest:*</label>
                     <select type="select" name="subject" id="subject" placeholder="Insert here" required>
                             <option value="work">Work Request</option>
                             <option value="contact">Contact me</option>
@@ -537,7 +537,7 @@
                     </select>
                         <p id="error-subject" class="errortext"></p>
 
-                     <label for="message">Comments:</label>
+                     <label for="message">Comments:*</label>
                     <textarea name="message" id="message" rows="10" required></textarea>
                         <p id="countcomments" class="count">Min. of 15 characters required</p>
                         <p id="error-message" class="errortext"></p>
@@ -545,12 +545,15 @@
 
                 <fieldset>
                     <label>
-                        <input type="radio" name="radio" id="radio" value="yes" required/><span> I agree </span>to use my data</label>
+                        <input type="radio" name="radio" id="radio" value="yes" required/> <span>I agree </span>to use my data*</label>
                             <p id="error-data" class="errortext"></p>
-                </fieldset>
-
-                    <input type="submit" value="Submit" />
+                    </fieldset>
                 
+                <div class="btncontact">
+                    <input type="submit" value="Clear" class="btn3"/>
+                    <input type="submit" value="Submit" />
+                </div>
+                <p class="count">*Field is required</p>
             </form>
         </div>
     </section>
