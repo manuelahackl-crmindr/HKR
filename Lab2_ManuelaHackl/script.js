@@ -144,17 +144,27 @@ email.addEventListener("mouseout", function() {
 })
 
 
-/*Webiste Validation
-const textweb = web.value;
-
-function isValidUrl(textweb) {
+//Website Validation
+function isValidUrl() {
+    const textweb = web.value;
   try {
-    new URL(string);
+    new URL(textweb);
+    WebError.textContent = " ";
+    web.classList.remove("errorborder")
+    WebError.classList.remove("errortxt")
+    web.classList.add("verifiedborder")
     return true;
-  } catch (err) {
+  } catch (werror) {
+    WebError.textContent = "Please insert valid Web-Adress";
+    web.classList.add("errorborder")
+    WebError.classList.add("errortxt")
+    web.classList.remove("verifiedborder")
     return false;
   }
 }
+
+web.addEventListener("input", isValidUrl)
+
 
 
 
