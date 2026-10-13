@@ -55,7 +55,9 @@ button.addEventListener('click', function () {
 */
 
 //FORM JS
-//Form Submit Event Errors
+//HTML refs
+
+//Form inputs
 const form = document.getElementById("FormBottom") 
 const fullname = document.getElementById("name")
 const web = document.getElementById("web")
@@ -63,55 +65,100 @@ const subject = document.getElementById("subject")
 const comments = document.getElementById("message")
 const data = document.getElementById("radio")
 const email = document.getElementById("email")
+
+//Count text
 const charcountname = document.getElementById("countname")
 const charcountcomments =document.getElementById("countcomments")
+
+//Error messages
 const EmailError = document.getElementById('error-email')
 const NameError = document.getElementById('error-name')
 const WebError = document.getElementById('error-web')
 const TopicError = document.getElementById('error-subject')
 const CommentsError = document.getElementById('error-message')
 const DataError = document.getElementById('error-data')
-
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    if (email.value.includes("@")) {
-        form.submit()
-        
-    } else { EmailError.textContent = "Please insert valid email"
-
-    }
-})
-
-//Name length
+const SubError = document.getElementById('suberror')
 
 //Characters Count Keypress
+//Name: min 2 chars
 fullname.addEventListener("keyup", function() {
     const textname = fullname.value;
     const countname = textname.length;
 
     if (countname < 2) {
         charcountname.textContent = 'Min. of 2 characters required';
+        fullname.classList.add("errorborder")
+        charcountname.classList.add("errortxt")
+        fullname.classList.remove("verifiedborder")
         
     } else { charcountname.textContent = 'Character Count: ' +countname;
+        fullname.classList.remove("errorborder")
+        charcountname.classList.remove("errortxt")
+        fullname.classList.add("verifiedborder")
 
     }
 })
 
+//Comment: min 15 chars
 comments.addEventListener("keyup", function() {
     const textcom = comments.value;
     const countcom = textcom.length;
 
     if (countcom < 15) {
         charcountcomments.textContent = 'Min. of 15 characters required';
+        comments.classList.add("errorborder")
+        charcountcomments.classList.add("errortxt")
+        comments.classList.remove("verifiedborder")
+
         
-    } else { charcountcomments.textContent = 'Character Count: ' +countcom;
+    } else { charcountcomments.textContent = 'Character Count: ';
+        comments.classList.remove("errorborder")
+        charcountcomments.classList.remove("errortxt")
+        comments.classList.add("verifiedborder") +countcom;
+
 
     }
 })
 
-//Email Error @
 
+//Form Event Errors
+//Email Error
+const emaildomain = [
+    ".de", ".se", ".com", ".co.uk", ".it", ".at", ".ch"
+]
+
+email.addEventListener("mouseout", function() {
+    const emailtrue = email.value.includes("@") && emaildomain.some(emaildomains => email.value.includes(emaildomains) )
+
+    if (!emailtrue) {EmailError.textContent = "Please insert valid email";
+        email.classList.add("errorborder")
+        EmailError.classList.add("errortxt")
+        email.classList.remove("verifiedborder")
+        
+    }
+    else {EmailError.textContent = " ";
+        email.classList.remove("errorborder")
+        EmailError.classList.remove("errortxt")
+        email.classList.add("verifiedborder")
+    }
+})
+
+
+/*Webiste Validation
+const textweb = web.value;
+
+function isValidUrl(textweb) {
+  try {
+    new URL(string);
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+
+
+
+/*Email Error @ alt
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -122,3 +169,6 @@ form.addEventListener("submit", function(event) {
 
     }
 })
+    */
+
+

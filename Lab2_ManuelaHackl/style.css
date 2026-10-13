@@ -233,13 +233,13 @@ input[type="submit" i] {
 
 }
 
-input.btn3[type="submit" i] {
+input.btn3[type="reset" i] {
     background-color: #edf6d2;
     max-width: 150px;
 
 }
 
-input.btn3[type="submit" i]:hover {
+input.btn3[type="reset" i]:hover {
     background-color: #a9d926;
     max-width: 150px;
 
@@ -250,6 +250,14 @@ input[type="submit" i]:hover {
     background-color: #edf6d2;
     border: 1px solid #a9d926;
 }
+
+/*javascript validation*/
+
+.errorborder {border: 2px solid red;}
+.errortxt {color: red;}
+.verifiedborder {border: 2px solid green;}
+ /*.errortext {color: red; font-size: 11px;}*/
+
 
 /**Logo Slider: clients + tools**/
 .top-slider, .bottom-slider {
@@ -632,9 +640,8 @@ form {
     padding: 40px 60px;
 }
 
- .errortext {color: red; font-size: 11px;}
 
- .count {font-size: 11px; margin: 0; padding: 0;}
+ .count, .errortxt {font-size: 11px; margin: 0; padding: 0;}
 
 fieldset {
     border: none; 
