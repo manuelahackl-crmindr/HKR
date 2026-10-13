@@ -81,7 +81,7 @@ const SubError = document.getElementById('suberror')
 
 //Characters Count Keypress
 //Name: min 2 chars
-fullname.addEventListener("keyup", function() {
+fullname.addEventListener("input", function() {
     const textname = fullname.value;
     const countname = textname.length;
 
@@ -106,16 +106,9 @@ comments.addEventListener("input", function() {
 
     if (countcom < 15) {
         charcountcomments.textContent = 'Min. of 15 characters required';
-        comments.classList.add("errorborder")
-        charcountcomments.classList.add("errortxt")
-        comments.classList.remove("verifiedborder")
 
         
-    } else { charcountcomments.textContent = 'Character Count: ';
-        comments.classList.remove("errorborder")
-        charcountcomments.classList.remove("errortxt")
-        comments.classList.add("verifiedborder") +countcom;
-
+    } else { charcountcomments.textContent = 'Character Count: '+countcom;
 
     }
 })
