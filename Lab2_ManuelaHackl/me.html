@@ -541,13 +541,17 @@
                     <textarea name="message" id="message" rows="10" placeholder="What do you want to tell me?" required></textarea>
                         <p id="countcomments" class="count">Min. of 15 characters required</p>
                         <p id="error-message"></p>
+
                         
 
                 <fieldset>
                     <label>
                         <input type="radio" name="radio" id="radio" value="yes" required/> <span>I agree </span>to use my data*</label>
-                            <p id="error-data" class="errortext"></p>
+                            <p id="error-data"></p>
                     </fieldset>
+
+                <div id="submit-error"><p id="all-error"></p>
+                </div>
                 
                 <div class="btncontact">
                     <input type="reset" value="Clear" class="btn3"/>

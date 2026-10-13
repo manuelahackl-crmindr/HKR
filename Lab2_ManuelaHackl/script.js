@@ -78,6 +78,17 @@ const TopicError = document.getElementById('error-subject')
 const CommentsError = document.getElementById('error-message')
 const DataError = document.getElementById('error-data')
 const SubError = document.getElementById('suberror')
+const AllError = document.getElementById('submit-error')
+const AllErrorMsg = document.getElementById('all-error')
+
+
+//Initial values for submit
+let nametrue = false;
+let emailtrue = false;
+let subjecttrue = false;
+let commenttrue = false;
+let webtrue = false;
+let datatrue = false;
 
 //Characters Count Keypress
 //Name: min 2 chars
@@ -90,17 +101,21 @@ fullname.addEventListener("input", function() {
         fullname.classList.remove("errorborder")
         charcountname.classList.remove("errortxt")
         fullname.classList.remove("verifiedborder")
+        nametrue = false;
         
     } else if (countname === 1 ) {
         charcountname.textContent = 'Min. of 2 characters required';
         fullname.classList.add("errorborder")
         charcountname.classList.add("errortxt")
         fullname.classList.remove("verifiedborder")
+        nametrue = false;
     
     } else { charcountname.textContent = 'Character Count: ' +countname;
         fullname.classList.remove("errorborder")
         charcountname.classList.remove("errortxt")
         fullname.classList.add("verifiedborder")
+        nametrue = true;
+        namesubmit = fullname.value;
 
     }
 })
@@ -115,11 +130,13 @@ comments.addEventListener("input", function() {
         comments.classList.add("errorborder")
         charcountcomments.classList.add("errortxt")
         comments.classList.remove("verifiedborder")
+        commenttrue = false;
         
     } else { charcountcomments.textContent = 'Character Count: '+countcom;
         comments.classList.remove("errorborder")
         charcountcomments.classList.remove("errortxt")
         comments.classList.add("verifiedborder")
+        commenttrue = true;
     }
 })
 
@@ -131,18 +148,20 @@ const emaildomain = [
 ]
 
 email.addEventListener("input", function() { //keyup
-    const emailtrue = email.value.includes("@") && emaildomain.some(emaildomains => email.value.includes(emaildomains) )
+    const emailvalid = email.value.includes("@") && emaildomain.some(emaildomains => email.value.includes(emaildomains) )
 
-    if (!emailtrue) {EmailError.textContent = "Please insert valid email";
+    if (!emailvalid) {EmailError.textContent = "Please insert valid email";
         email.classList.add("errorborder")
         EmailError.classList.add("errortxt")
         email.classList.remove("verifiedborder")
+        emailtrue = false;
         
     }
     else {EmailError.textContent = " ";
         email.classList.remove("errorborder")
         EmailError.classList.remove("errortxt")
         email.classList.add("verifiedborder")
+        emailtrue = true;
     }
 })
 
@@ -156,28 +175,49 @@ function isValidUrl() {
     web.classList.remove("errorborder")
     WebError.classList.remove("errortxt")
     web.classList.add("verifiedborder")
-    return true;
+    webtrue = true;
   } catch (werror) {
     WebError.textContent = "Please insert valid Web-Adress";
     web.classList.add("errorborder")
     WebError.classList.add("errortxt")
     web.classList.remove("verifiedborder")
-    return false;
+    webtrue = false;
   }
 }
 
 web.addEventListener("input", isValidUrl)
 
 
+// DSGVO Error
+data.addEventListener("input", function() { 
+    if (data = false ) {
+        DataError.textContent = "Please accept";
+        datatrue.classList.add("errorborder")
+        DataError.classList.add("errortxt")
+        data.classList.remove("verifiedborder")
+        datatrue = false;
+
+} else {
+        DataError.textContent = "";
+        datatrue.classList.remove("errorborder")
+        DataError.classList.remove("errortxt")
+        data.classList.add("verifiedborder")
+        datatrue = true;
+    }
+
+})
+
+
 //Topic Error
 subject.addEventListener("change", function() {
-    const subjecttrue = subject.value
+    const subjectvalue = subject.value
 
-    if (subjecttrue !="Choose a topic") {
+    if (subjectvalue !="Choose a topic") {
         SubError.textContent = "";
         subject.classList.remove("errorborder")
         SubError.classList.remove("errortxt")
         subject.classList.add("verifiedborder")
+        subjecttrue = true;
         
     }
     else {
@@ -185,6 +225,7 @@ subject.addEventListener("change", function() {
         subject.classList.add("errorborder")
         SubError.classList.add("errortxt")
         subject.classList.remove("verifiedborder")
+        subjecttrue = false;
     }
 })
 
@@ -202,5 +243,20 @@ form.addEventListener("submit", function(event) {
     }
 })
     */
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    namesubmit = fullname.value;
+
+if (nametrue === true && emailtrue === true && subjecttrue === true && commenttrue === true) {
+            AllError.textContent = "Thanks you for your submission, " + namesubmit;
+        AllError.classList.remove("allerror")
+        AllError.classList.add("allgood")
+} else 
 
 
+    {
+            AllError.textContent = "Please check the fields above!";
+            AllError.classList.add("allerror")
+            AllError.classList.remove("allgood")
+} 
+})

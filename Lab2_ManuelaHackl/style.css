@@ -678,12 +678,15 @@ footer img {
 }
 
 
-/*javascript*/
+/*DESKTOP javascript*/
 
 .errorborder, #message.errorborder {border: 2px solid red;}
 .errortxt {color: red;}
+.verifiedtxt {color: #1F3A52; text-decoration: bold;}
 .verifiedborder, #message.verifiedborder {border: 2px solid green;}
  /*.errortext {color: red; font-size: 11px;}*/
+.allgood {background-color: #a9d926; color: #1F3A52; border-radius: 5px; padding: 15px;}
+.allerror {background-color: #dde0e7; color: red; border-radius: 5px; border: 1px solid red; padding: 15px;}
 
 /* I. Desktop END
 ---------------------*/
