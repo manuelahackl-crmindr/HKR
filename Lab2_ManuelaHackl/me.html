@@ -525,12 +525,12 @@
                         <p id="error-email" class="errortext"></p>
 
                 <label for="website">Your website:</label>
-                    <input type="text" name="web" id="web" />
+                    <input type="text" name="web" id="web" placeholder="http://..."/>
                         <p id="error-web" class="errortext"></p>
 
                     <label for="subject">Topic of Interest:*</label>
-                    <select type="select" name="subject" id="subject" placeholder="Insert here" required>
-                            <option value="work">Work Request</option>
+                    <select type="select" name="subject" id="subject" placeholder="Choose" required>
+                            <option value="work">Choose a topic</option>
                             <option value="contact">Contact me</option>
                             <option value="urgent">Urgent CRM fix</option>
                             <option value="fees">Fees & Conditions</option>
@@ -538,7 +538,7 @@
                         <p id="error-subject" class="errortext"></p>
 
                      <label for="message">Comments:*</label>
-                    <textarea name="message" id="message" rows="10" required></textarea>
+                    <textarea type="text" name="message" id="message" rows="10" placeholder="What do you want to tell me?" required></textarea>
                         <p id="countcomments" class="count">Min. of 15 characters required</p>
                         <p id="error-message" class="errortext"></p>
                         

@@ -648,7 +648,8 @@ fieldset {
     padding-bottom: 50px;
 }
 
-input, #message, select {background-color: #edf6d2;}
+input, #message, select {background-color: #edf6d2;
+font-family: "Nunito", Verdana, sans-serif;}
 
 .booking article {
     max-width: 500px;

@@ -100,7 +100,7 @@ fullname.addEventListener("keyup", function() {
 })
 
 //Comment: min 15 chars
-comments.addEventListener("keyup", function() {
+comments.addEventListener("input", function() {
     const textcom = comments.value;
     const countcom = textcom.length;
 
@@ -127,7 +127,7 @@ const emaildomain = [
     ".de", ".se", ".com", ".co.uk", ".it", ".at", ".ch"
 ]
 
-email.addEventListener("mouseout", function() {
+email.addEventListener("input", function() { //keyup
     const emailtrue = email.value.includes("@") && emaildomain.some(emaildomains => email.value.includes(emaildomains) )
 
     if (!emailtrue) {EmailError.textContent = "Please insert valid email";
@@ -165,6 +165,25 @@ function isValidUrl() {
 
 web.addEventListener("input", isValidUrl)
 
+
+//Topic Error
+subject.addEventListener("change", function() {
+    const subjecttrue = subject.value
+
+    if (subjecttrue !="Choose a topic") {
+        SubError.textContent = "";
+        subject.classList.remove("errorborder")
+        SubError.classList.remove("errortxt")
+        subject.classList.add("verifiedborder")
+        
+    }
+    else {
+        SubError.textContent = "Please choose a topic";
+        subject.classList.add("errorborder")
+        SubError.classList.add("errortxt")
+        subject.classList.remove("verifiedborder")
+    }
+})
 
 
 
