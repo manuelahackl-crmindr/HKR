@@ -251,13 +251,6 @@ input[type="submit" i]:hover {
     border: 1px solid #a9d926;
 }
 
-/*javascript validation*/
-
-.errorborder {border: 2px solid red;}
-.errortxt {color: red;}
-.verifiedborder {border: 2px solid green;}
- /*.errortext {color: red; font-size: 11px;}*/
-
 
 /**Logo Slider: clients + tools**/
 .top-slider, .bottom-slider {
@@ -683,6 +676,14 @@ footer img {
     border-radius: 12.5px;
     margin: 5px;
 }
+
+
+/*javascript*/
+
+.errorborder, #message.errorborder {border: 2px solid red;}
+.errortxt {color: red;}
+.verifiedborder, #message.verifiedborder {border: 2px solid green;}
+ /*.errortext {color: red; font-size: 11px;}*/
 
 /* I. Desktop END
 ---------------------*/

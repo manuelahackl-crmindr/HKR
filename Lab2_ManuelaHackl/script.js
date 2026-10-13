@@ -85,12 +85,18 @@ fullname.addEventListener("input", function() {
     const textname = fullname.value;
     const countname = textname.length;
 
-    if (countname < 2) {
+    if (countname === 0) {
+        charcountname.textContent = 'Min. of 2 characters required';
+        fullname.classList.remove("errorborder")
+        charcountname.classList.remove("errortxt")
+        fullname.classList.remove("verifiedborder")
+        
+    } else if (countname === 1 ) {
         charcountname.textContent = 'Min. of 2 characters required';
         fullname.classList.add("errorborder")
         charcountname.classList.add("errortxt")
         fullname.classList.remove("verifiedborder")
-        
+    
     } else { charcountname.textContent = 'Character Count: ' +countname;
         fullname.classList.remove("errorborder")
         charcountname.classList.remove("errortxt")
@@ -106,10 +112,14 @@ comments.addEventListener("input", function() {
 
     if (countcom < 15) {
         charcountcomments.textContent = 'Min. of 15 characters required';
-
+        comments.classList.add("errorborder")
+        charcountcomments.classList.add("errortxt")
+        comments.classList.remove("verifiedborder")
         
     } else { charcountcomments.textContent = 'Character Count: '+countcom;
-
+        comments.classList.remove("errorborder")
+        charcountcomments.classList.remove("errortxt")
+        comments.classList.add("verifiedborder")
     }
 })
 
