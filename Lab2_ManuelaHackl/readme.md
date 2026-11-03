@@ -3,6 +3,10 @@
 ## PROJECT DESCRIPTION
 This website and files is a personal and professional portfolio website created as part of Lab 2 within the university course "Javascript for Web Development" at Kristinad University in Sweden (HKR), aiming for Grade 3.
 
+# GitHub Repository
+- Lab2_ManuelaHackl:https://github.com/manuelahackl-crmindr/HKR/tree/main/Lab2_ManuelaHackl
+- Permalink: https://github.com/manuelahackl-crmindr/HKR/tree/341799e24235179e26b7ccd1e71099c858b023df/Lab2_ManuelaHackl
+
 # HKR Instructions
 - University Instructions for Lab 2, Grade 3 can be found in the repositoryfile "HKR_Instructions_Lab2.pdf".
 - path: 
@@ -19,15 +23,16 @@ This website and files is a personal and professional portfolio website created 
 ## OUTCOME
 # Structure
 Website Structure:
-- index.html as homepage
-- portfolio.html as project overview
-- me.html as about me page
-- data.html as data & GDPR information
+- index.html as homepage, with reduced contact form
+- me.html as about me page with fiull feedback form
+- portfolio.html as project overview, with reduced contact form
+- data.html as data & GDPR information, without contact form
 - script.js showing javascript 
 
 Folder structure:
 - main files ly in the root folder
 - assets: image storage
+- build-log: containing relevant screenshots, as well as visual documentation for essay 
 - documentation: coding history
 - documents: required additional documents for assigment as essay, screenshot.
 
@@ -46,8 +51,10 @@ Upcoming additions will be:
     - Corrected invalid button/link nesting and proofread the text.
 
 ## HKR IMPORTANT NOTES
-This Website is based on the files submitted for assignemnt on 22/09/26, required changes in html and css files therefore are not reflected in this Lab.
+- This is for private uses only
+- This Website is based on the files submitted for assignemnt on 22/09/26, required changes in html and css files therefore are not reflected in this Lab.
 
+# Notes for assignment
 Thanks for reviewing and your feedback on Lab1!
 Required changes will be uploaded within the original Lab1 files in assignemnt 1, containing he required improvements for Grade 5:
 - Use CSS custom properties for shared colours, typography, and spacing.
@@ -55,6 +62,4 @@ Required changes will be uploaded within the original Lab1 files in assignemnt 1
 - Add suitable alt text to all meaningful images, and alt="" to decorative images.
 - Improve the 3×3 gallery markup using proper <figure> and <figcaption> elements, and clearly show that each item is your own creation.
 - Organise the Build Log so it clearly shows at least eight screenshots for each page.
-- Correct the invalid button/link nesting and proofread the text.
-
-
+- Correct the invalid button/link nesting and proofread the text

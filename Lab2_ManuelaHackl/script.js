@@ -273,13 +273,13 @@ if (
     dataIsValid
 ) {
      AllErrorMsg.textContent = "Thanks for your feedback, " + fullname.value + "!";
-        AllError.classList.remove("allerror")
-        AllError.classList.add("allgood")
+    AllError.classList.remove("allerror")
+    AllError.classList.add("allgood")
 
-        setTimeout(function() {
-        AllErrorMsg.textContent = ""
-        AllError.classList.remove("allgood")
-        form.reset()
+    setTimeout(function() {
+    AllErrorMsg.textContent = ""
+    AllError.classList.remove("allgood")
+    form.reset()
 }, 4000);
 
 } else {
