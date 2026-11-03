@@ -91,10 +91,14 @@ let webtrue = false;
 let datatrue = false;
 
 //Characters Count Keypress
-//Name: min 2 chars
+//Name: min 2 chars inkl. international chars
 fullname.addEventListener("input", function() {
     const textname = fullname.value;
     const countname = textname.length;
+
+    ```javascript
+    const validname = /^[\p{L}\p{M}\s'-]+$/u.test(textname)
+    ```
 
     if (countname === 0) {
         charcountname.textContent = 'Min. of 2 characters required';
@@ -103,7 +107,7 @@ fullname.addEventListener("input", function() {
         fullname.classList.remove("verifiedborder")
         nametrue = false;
         
-    } else if (countname === 1 ) {
+    } else if (countname < 2 || !validname ) {
         charcountname.textContent = 'Min. of 2 characters required';
         fullname.classList.add("errorborder")
         charcountname.classList.add("errortxt")
@@ -119,6 +123,9 @@ fullname.addEventListener("input", function() {
 
     }
 })
+
+//+international text
+
 
 //Comment: min 15 chars
 comments.addEventListener("input", function() {
@@ -188,7 +195,7 @@ email.addEventListener("input", function() { //keyup
 
 //Website Validation
 
-web.addEventListener("input", function()) {
+web.addEventListener ("input", function() {
     if (web.value ==="") {
         WebError.textContent = ""
         web.classList.remove("errorborder")
@@ -209,7 +216,7 @@ web.addEventListener("input", function()) {
             web.classList.add("verifiedborder")
             webtrue = true;
     }
-}
+});
 
 /*old version: validation by new url:
 function isValidUrl() {
