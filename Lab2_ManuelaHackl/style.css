@@ -365,9 +365,9 @@ input[type="submit" i]:hover {
 }
 
 .projects figure img {
-width: 100%;
+    width: 100%;
     overflow: hidden;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
 
 .case small {color: #a9d926; font-size: 6px; margin: 0; padding: 0;}
@@ -785,15 +785,15 @@ II. Tablet END-----*/
 -------------------*/
 @media screen and (max-width: 700px) {
 
-h2, .box-highlight h2 {font-size: 32px;
+h2, .box-highlight h2 {font-size: 300%;
 
 }
 
-h4 {font-size: x-large
-
+h4 {text-wrap: wrap;
+    font-size: 250%;
 }
 
-h3 {font-size: xx-large; margin-bottom: 40px;}
+h3 {font-size: 300%; margin-bottom: 40px;}
 p, li {font-size:larger; margin-bottom: 50px; text-align: justify;}
 
 .me li, #meetme li {line-height: 200%; text-align: center; width: 100%;}
@@ -811,22 +811,15 @@ p, li {font-size:larger; margin-bottom: 50px; text-align: justify;}
 
 }
 
-button, input {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    font-size: x-large;
-}
-
 header {display: flex;
         flex-direction: column;
         align-items: center;
         padding: 0;
-
 }
 
-nav {width: 100%;}
+nav {
+    width: 100%;
+}
 
 nav ul {
     display: flex;
@@ -850,23 +843,39 @@ border-top: 1px solid #dde0e7;
 .logo {
     align-self:center;
       align-self:center;
-    font-size: large;
+    font-size: 400%;
+    padding: 20px 0 20px 0;
 
 }
 
 .logo a:hover {color: none;}
 
+.hero-pages {padding-top: 20%; padding-bottom: 20%;}
+
+button, input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    font-size: x-large;
+    justify-content: center;
+    
+}
+
 .btn0 {display: none;}
 
-.btn1, .btn2 {width: 100%; padding: 15px;}
-
-
-.logo a:hover {color: none;}
+.btn1, .btn2, .btn3, input, .btncontact {
+    min-height: 100px; 
+    width: 100%; 
+    padding: 15px; 
+    flex-wrap: wrap;
+}
 
 nav li a {
-    font-size: large;
+    font-size: xx-large;
     display: block;
     width: 100%;
+    padding: 30px 0 30px 0;
     text-decoration: none;
 }
 
@@ -877,6 +886,9 @@ nav li a:hover {color: #1F3A52;}
 a[aria-current="page"] {text-decoration: none;}
 
 
+#text {
+    display: none;
+}
 
 #cases, #boxes {
     flex-direction: column;
@@ -885,14 +897,10 @@ a[aria-current="page"] {text-decoration: none;}
 #cases p {
     display: none;
 }
-#text {
-    display: none;
-}
 
-
-  #case article, .case {border: 1px solid red; min-height: none; height: auto; }
-
-
+#case article, .case { 
+    min-height: none; 
+    height: 100%; }
 
 #boxes article {
     margin-top: 10%;
@@ -914,35 +922,79 @@ a[aria-current="page"] {text-decoration: none;}
 .socials img {width: 150px; height: auto;}*/
 
 
-/*Showcases*/
+/*MOBILE Showcases*/
+
+#section-cases {
+    padding-top:30%;
+    padding-bottom: 20%;
+}
 
 .projects article {
     width: 100%;
-    min-height: none;
+    min-height: 300px;
     border: 1px solid #32506a;
+    background-image: url("assets/memox_dashboard.png");
+    background-size: 300%;
+    background-position: top;
+    padding: 0px;
 }
 
-.case {margin-bottom: 5%; 
-width: 100%;
-box-sizing: border-box;}
+.case {
+        margin-bottom: 25%;
+        width: 100%;
+        box-sizing: border-box; 
+}
+
+.case small {
+    display: none;
+    /*font-size: large; 
+    color:#dde0e7*/}
 
 .kpi {
-    font-size: larger;
+    font-size: 250%;
     font-weight: 800;
-    margin: 12px 0 16px;
+    line-height: 200%;
 }
 
-h4 {text-wrap: wrap;}
+.projects h4 {display: no
+    background-color: #edf6d2;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dde0e7;
+    /*background-color: rgba(255, 255, 255, 0.8)*/}
 
-.projects figure img {
-    max-width: none;
-    width: 100%;
-    height: auto;
-
+.kpibox {    
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 10px;
 }
-/*Contact*/
+ 
+.projects figure img, .projects figure {
+    display: none;
+    /*object-fit:cover;
+    border-radius: 0%;
+    object-position: top left;*/
+}
+
+.case figcaption {padding: 20px 20px 50px 20px}
+
+
+/*MOBILE Daily Business*/
+.work {
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+/*MOBILE Contact*/
+#section-meetme {
+    padding-bottom: 30%;
+    padding-top: 30%;
+}
+
 #meetme {
     align-items: center;
+    padding-bottom: 30%;
+    padding-top: 30%;
 }
 
 form {
@@ -984,18 +1036,32 @@ padding: 30px 0;
 width: 100%;
 box-sizing: border-box;
 max-width: none;
+min-height: 100px;
+}
+
+input[type="reset" i] {
+padding: 30px 0;
+width: 100%;
+box-sizing: border-box;
+min-height: 100px;
 }
 
 
 label {
     display: inline-block;
     white-space: normal;
-    font-size: larger;
+    font-size:xx-large;
     text-align: center;
 }
 
-/*Footer*/
+.count, .errortxt {
+    font-size:large;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
+/*MOBILE Footer*/
 
 
 footer {display: flex; font-size: larger; flex-direction: column;}
@@ -1024,9 +1090,10 @@ footer h2 {display: none;}
 }
 .me figure button {font-size: medium;}
 
-/*Grid Mobile*/
+/*MOBILE Grid Gallery*/
 .grid-gallery {
-     padding: 58px 52px;
+     padding-top:30%;
+     padding-bottom: 30%;
      border: none;
      position: relative;
      height:100%;
@@ -1035,7 +1102,7 @@ footer h2 {display: none;}
 #gallery {
     grid-template-columns: repeat(1, 100%);
     grid-auto-rows: auto;
-    grid-gap: 50px;
+    grid-gap: 100px;
     display: grid;
     justify-content:center;
     margin: 0%;
@@ -1060,11 +1127,13 @@ footer h2 {display: none;}
 }
 
 
-#gallery figcaption {display: none;}
-#gallery div {   
-
+#gallery figcaption {
+    font-size: large;
 }
 
+#gallery figcaption h2 {
+    display: none;
+}
 
 
 #gallery img {
@@ -1075,10 +1144,10 @@ footer h2 {display: none;}
 }
 
 
-/**Logo Slider mobile: 1 Logo for 3 seconds, automatic sliding**/
+/**MOBILE Logo Slider mobile: 1 Logo for 3 seconds, automatic sliding**/
 .top-slider, .bottom-slider {
     overflow: hidden;
-    padding: 22px 0;
+    padding: 40px 0;
     min-height: 100px;
 
 }

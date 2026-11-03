@@ -189,17 +189,17 @@ web.addEventListener("input", isValidUrl)
 
 
 // DSGVO Error
-data.addEventListener("input", function() { 
-    if (data = false ) {
+data.addEventListener("click", function() { 
+    if (data.checked === false ) {
         DataError.textContent = "Please accept";
-        datatrue.classList.add("errorborder")
+        data.classList.add("errorborder")
         DataError.classList.add("errortxt")
         data.classList.remove("verifiedborder")
         datatrue = false;
 
 } else {
         DataError.textContent = "";
-        datatrue.classList.remove("errorborder")
+        data.classList.remove("errorborder")
         DataError.classList.remove("errortxt")
         data.classList.add("verifiedborder")
         datatrue = true;
@@ -247,16 +247,22 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
     namesubmit = fullname.value;
 
-if (nametrue === true && emailtrue === true && subjecttrue === true && commenttrue === true) {
-            AllError.textContent = "Thanks you for your submission, " + namesubmit;
+if (nametrue === true && emailtrue === true && subjecttrue === true && commenttrue === true && data.checked === true ) {
+        AllError.textContent = "Thanks for your feedback, " + namesubmit;
         AllError.classList.remove("allerror")
         AllError.classList.add("allgood")
-} else 
+} else {
+        AllError.textContent = "Please check the fields above!";
+        AllError.classList.add("allerror")
+        AllError.classList.remove("allgood")
 
-
-    {
-            AllError.textContent = "Please check the fields above!";
-            AllError.classList.add("allerror")
-            AllError.classList.remove("allgood")
+        if (data.checked === false ) {
+        DataError.textContent = "Please accept";
+        data.classList.add("errorborder")
+        DataError.classList.add("errortxt")
+        data.classList.remove("verifiedborder")
 } 
-})
+}})
+
+
+
