@@ -4,8 +4,6 @@
 
 /*Basics*/
 
-
-
 body {
     font-family: "Nunito", Verdana, sans-serif;
     background-color: #fcfcfc;
@@ -187,12 +185,7 @@ button, input, #message, select {
     font-size: 13px;
 }
 
-
 select {appearance: base-select;}
-
-/*select option:hover {}
-select option:focus {}
-select option:checked {}*/
 
 form input:focus,
 form textarea:focus,
@@ -206,16 +199,6 @@ form textarea,
 form select {
     transition: border-color 0.2s ease, outline 0.2s ease;
 }
-
-
-
-/**input[type=text]:focus,  {
-  border: 5px solid #a9d926;
-}
-
-select[type=select]:focus {outline: none;}
-
-input[type=select] {color: red;}**/
 
 
 button:hover {
@@ -315,13 +298,7 @@ input[type="submit" i]:hover {
 
 .tools, .work {
     background-color: #fcfcfc;
-        padding: 58px 52px;
-
-      
-}
-
-.work {
-    
+        padding: 58px 52px;  
 }
 
 
@@ -437,7 +414,7 @@ input[type="submit" i]:hover {
     height: 100%;
     object-fit:cover;
     object-position: left top;
-border-radius: 10px;}
+    border-radius: 10px;}
 
 
 .gallery-item {
@@ -445,15 +422,13 @@ border-radius: 10px;}
 
 }
 
-#gallery figcaption {  /*  display: block;border-radius: 10px;
-padding: 5px; */
+#gallery figcaption { 
     color: #32506a; 
     font-size: 12px;
     background-color: #fcfcfc;
     border: 1px solid #dde0e7;
     border-radius: 10px;
     padding: 10px;
-/*box-shadow: 0px 1px 3px #1F3A52;*/
     position: absolute;
     bottom: 25px;
     right: 10px;
@@ -519,7 +494,7 @@ padding: 5px; */
     border: 1px solid #dde0e7;
     text-align: left;
     margin-bottom: 1%;
-padding: 1%;
+    padding: 1%;
     height: 100%;
     min-height: 50px;
 }
@@ -791,6 +766,7 @@ form {
     flex-direction: column;
 }
 .case figure {margin-top: 20px;}
+
 label {
     display: flex;
     align-items: baseline;
@@ -1041,17 +1017,9 @@ button, input {
 display: none;
 }
 
-.kpibox {    
-    /*background-color: rgba(255, 255, 255, 0.6);
-    padding: 10px;
-    border-radius: 10px;*/
-}
  
 .projects figure img, .projects figure {
     display: none;
-    /*object-fit:cover;
-    border-radius: 0%;
-    object-position: top left;*/
 }
 
 
