@@ -99,25 +99,28 @@ function validateFullName() {
 
     if (countname === 0) {
         charcountname.textContent = 'Min. of 2 characters required';
-        fullname.classList.remove("errorborder")
-        charcountname.classList.remove("errortxt")
-        fullname.classList.remove("verifiedborder")
-        charcountname.classList.remove("validtxt")
-        
-    } else if (countname < 2 || !validname ) {
-        charcountname.textContent = 'Min. of 2 characters required';
         fullname.classList.add("errorborder")
         charcountname.classList.add("errortxt")
         fullname.classList.remove("verifiedborder")
         charcountname.classList.remove("validtxt")
+        nametrue = false
+        
+    } else if (countname < 2 || !validname ) {
+        charcountname.textContent = 'Min. of 2 characters required (' + countname + '/2)';
+        fullname.classList.add("errorborder")
+        charcountname.classList.add("errortxt")
+        fullname.classList.remove("verifiedborder")
+        charcountname.classList.remove("validtxt")
+        nametrue = false
     
     } else { charcountname.textContent = 'Character Count: ' +countname;
         fullname.classList.remove("errorborder")
         charcountname.classList.remove("errortxt")
         fullname.classList.add("verifiedborder")
         charcountname.classList.add("validtxt")
+        nametrue = true
     }
-     return nametrue
+    return nametrue
 }
 fullname.addEventListener("input", validateFullName)
 
@@ -127,17 +130,20 @@ function validateComments() {
     const countcom = textcom.length;
 
     if (countcom < 15) {
-        charcountcomments.textContent = 'Min. of 15 characters required';
+        charcountcomments.textContent = 'Min. of 15 characters required (' +  countcom+ '/15)';
         comments.classList.add("errorborder")
         charcountcomments.classList.add("errortxt")
         comments.classList.remove("verifiedborder")
         charcountcomments.classList.remove("validtxt")
+        commenttrue = false;
         
     } else { charcountcomments.textContent = 'Character Count: '+countcom;
         comments.classList.remove("errorborder")
         charcountcomments.classList.remove("errortxt")
         comments.classList.add("verifiedborder")
         charcountcomments.classList.add("validtxt")
+        commenttrue = true;
+
     }
 
     return commenttrue
@@ -149,12 +155,13 @@ comments.addEventListener("input", validateComments)
 //Email Error
 function validateEmail() {
 
-    if (!email.validity.valid) {
+    if (!email.validity.valid || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
         EmailError.textContent = "Please insert valid email";
         email.classList.add("errorborder")
         EmailError.classList.add("errortxt")
         email.classList.remove("verifiedborder")
         EmailError.classList.remove("validtxt")
+        emailtrue = false
         
     }
     else {EmailError.textContent = "";
@@ -162,6 +169,8 @@ function validateEmail() {
         EmailError.classList.remove("errortxt")
         email.classList.add("verifiedborder")
         EmailError.classList.add("validtxt")
+        emailtrue = true
+
     }
     return emailtrue
 }
@@ -175,7 +184,7 @@ function validateWebsite() {
         WebError.textContent = ""
         web.classList.remove("errorborder")
         WebError.classList.remove("errortxt")
-        web.classList.add("verifiedborder")
+        web.classList.remove("verifiedborder")
         webtrue = true;
     } 
     else if (!web.validity.valid) {
@@ -198,46 +207,47 @@ web.addEventListener("input", validateWebsite);
 
 
 // DSGVO Error
-
 function validateData() {
     if (data.checked === false ) {
         DataError.textContent = "Please accept";
         data.classList.add("errorborder")
         DataError.classList.add("errortxt")
         data.classList.remove("verifiedborder")
+        datatrue = false
+
 
 } else {
         DataError.textContent = "";
         data.classList.remove("errorborder")
         DataError.classList.remove("errortxt")
         data.classList.add("verifiedborder")
+        datatrue = true
     }
-
+return datatrue
 }
 
 data.addEventListener("change", validateData);
 
 
 //Topic Error //
-
 function validateTopic() {
-    const subjectvalue = subject.value
 
     if (subject.value === "") {
-        SubError.textContent = "Please choose a topic";
+        TopicError.textContent = "Please choose a topic";
         subject.classList.add("errorborder")
-        SubError.classList.add("errortxt")
+        TopicError.classList.add("errortxt")
         subject.classList.remove("verifiedborder")
         subjecttrue = false;
         
     }
     else {
-        SubError.textContent = "";
+        TopicError.textContent = "";
         subject.classList.remove("errorborder")
-        SubError.classList.remove("errortxt")
+        TopicError.classList.remove("errortxt")
         subject.classList.add("verifiedborder")
         subjecttrue = true;
     }
+    return subjecttrue
 }
 
 
@@ -262,15 +272,55 @@ if (
     commentIsValid &&
     dataIsValid
 ) {
-     AllError.textContent = "Thanks for your feedback, " + fullname.value + "!" ";
+     AllErrorMsg.textContent = "Thanks for your feedback, " + fullname.value + "!";
         AllError.classList.remove("allerror")
         AllError.classList.add("allgood")
 
+        setTimeout(function() {
+        AllErrorMsg.textContent = ""
+        AllError.classList.remove("allgood")
+        form.reset()
+}, 4000);
+
 } else {
-        AllError.textContent = "Please check the fields above!";
+        AllErrorMsg.textContent = "Please check the fields above!";
         AllError.classList.add("allerror")
         AllError.classList.remove("allgood")
 
 } 
-})
+});
+
+//reset all
+
+function resetForm() {
+    nametrue = false
+    emailtrue = false
+    subjecttrue = false
+    commenttrue = false
+    webtrue = false
+    datatrue = false
+    EmailError.textContent = ""
+    WebError.textContent = ""
+    TopicError.textContent = ""
+    DataError.textContent = ""
+    AllErrorMsg.textContent = ""
+    charcountname.textContent = "Min. of 2 characters required"
+    charcountcomments.textContent = "Min. of 15 characters required"
+    fullname.classList.remove("errorborder", "verifiedborder")
+    email.classList.remove("errorborder", "verifiedborder")
+    web.classList.remove("errorborder", "verifiedborder")
+    subject.classList.remove("errorborder", "verifiedborder")
+    comments.classList.remove("errorborder", "verifiedborder")
+    data.classList.remove("errorborder", "verifiedborder")
+    charcountname.classList.remove("errortxt")
+    charcountcomments.classList.remove("errortxt")
+    AllError.classList.remove("allerror", "allgood")
+    charcountname.classList.remove("validtxt")
+    charcountcomments.classList.remove("validtxt")
+    EmailError.classList.remove("errortxt", "validtxt")
+    WebError.classList.remove("errortxt")
+    TopicError.classList.remove("errortxt")
+    DataError.classList.remove("errortxt")
+}
+form.addEventListener("reset", resetForm);
 
