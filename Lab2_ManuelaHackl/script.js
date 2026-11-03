@@ -92,43 +92,37 @@ let datatrue = false;
 
 //Characters Count Keypress
 //Name: min 2 chars inkl. international chars
-fullname.addEventListener("input", function() {
+function validateFullName() {
     const textname = fullname.value;
     const countname = textname.length;
-
-    ```javascript
     const validname = /^[\p{L}\p{M}\s'-]+$/u.test(textname)
-    ```
 
     if (countname === 0) {
         charcountname.textContent = 'Min. of 2 characters required';
         fullname.classList.remove("errorborder")
         charcountname.classList.remove("errortxt")
         fullname.classList.remove("verifiedborder")
-        nametrue = false;
+        charcountname.classList.remove("validtxt")
         
     } else if (countname < 2 || !validname ) {
         charcountname.textContent = 'Min. of 2 characters required';
         fullname.classList.add("errorborder")
         charcountname.classList.add("errortxt")
         fullname.classList.remove("verifiedborder")
-        nametrue = false;
+        charcountname.classList.remove("validtxt")
     
     } else { charcountname.textContent = 'Character Count: ' +countname;
         fullname.classList.remove("errorborder")
         charcountname.classList.remove("errortxt")
         fullname.classList.add("verifiedborder")
-        nametrue = true;
-        namesubmit = fullname.value;
-
+        charcountname.classList.add("validtxt")
     }
-})
-
-//+international text
-
+     return nametrue
+}
+fullname.addEventListener("input", validateFullName)
 
 //Comment: min 15 chars
-comments.addEventListener("input", function() {
+function validateComments() {
     const textcom = comments.value;
     const countcom = textcom.length;
 
@@ -137,65 +131,46 @@ comments.addEventListener("input", function() {
         comments.classList.add("errorborder")
         charcountcomments.classList.add("errortxt")
         comments.classList.remove("verifiedborder")
-        commenttrue = false;
+        charcountcomments.classList.remove("validtxt")
         
     } else { charcountcomments.textContent = 'Character Count: '+countcom;
         comments.classList.remove("errorborder")
         charcountcomments.classList.remove("errortxt")
         comments.classList.add("verifiedborder")
-        commenttrue = true;
+        charcountcomments.classList.add("validtxt")
     }
-})
 
+    return commenttrue
+}
+
+comments.addEventListener("input", validateComments)
 
 //Form Event Errors
 //Email Error
-
-email.addEventListener("input", function() { 
+function validateEmail() {
 
     if (!email.validity.valid) {
         EmailError.textContent = "Please insert valid email";
         email.classList.add("errorborder")
         EmailError.classList.add("errortxt")
         email.classList.remove("verifiedborder")
-        emailtrue = false;
+        EmailError.classList.remove("validtxt")
         
     }
     else {EmailError.textContent = "";
         email.classList.remove("errorborder")
         EmailError.classList.remove("errortxt")
         email.classList.add("verifiedborder")
-        emailtrue = true;
+        EmailError.classList.add("validtxt")
     }
-})
+    return emailtrue
+}
 
-/*old version: validation by @ and email ending:
-const emaildomain = [
-    ".de", ".se", ".com", ".co.uk", ".it", ".at", ".ch"
-]
-
-email.addEventListener("input", function() { //keyup
-    const emailvalid = email.value.includes("@") && emaildomain.some(emaildomains => email.value.includes(emaildomains) )
-
-    if (!emailvalid) {EmailError.textContent = "Please insert valid email";
-        email.classList.add("errorborder")
-        EmailError.classList.add("errortxt")
-        email.classList.remove("verifiedborder")
-        emailtrue = false;
-        
-    }
-    else {EmailError.textContent = " ";
-        email.classList.remove("errorborder")
-        EmailError.classList.remove("errortxt")
-        email.classList.add("verifiedborder")
-        emailtrue = true;
-    }
-})
-*/
+email.addEventListener("input", validateEmail)
 
 //Website Validation
 
-web.addEventListener ("input", function() {
+function validateWebsite() {
     if (web.value ==="") {
         WebError.textContent = ""
         web.classList.remove("errorborder")
@@ -204,7 +179,7 @@ web.addEventListener ("input", function() {
         webtrue = true;
     } 
     else if (!web.validity.valid) {
-            WebError.textContent = "Please insert valid Web-Adress";
+            WebError.textContent = "Please insert valid Web Adress";
             web.classList.add("errorborder")
             WebError.classList.add("errortxt")
             web.classList.remove("verifiedborder")
@@ -216,53 +191,36 @@ web.addEventListener ("input", function() {
             web.classList.add("verifiedborder")
             webtrue = true;
     }
-});
-
-/*old version: validation by new url:
-function isValidUrl() {
-    const textweb = web.value;
-  try {
-    new URL(textweb);
-    WebError.textContent = " ";
-    web.classList.remove("errorborder")
-    WebError.classList.remove("errortxt")
-    web.classList.add("verifiedborder")
-    webtrue = true;
-  } catch (werror) {
-    WebError.textContent = "Please insert valid Web-Adress";
-    web.classList.add("errorborder")
-    WebError.classList.add("errortxt")
-    web.classList.remove("verifiedborder")
-    webtrue = false;
-  }
+    return webtrue;
 }
 
-web.addEventListener("input", isValidUrl)
+web.addEventListener("input", validateWebsite);
 
 
 // DSGVO Error
-data.addEventListener("click", function() { 
+
+function validateData() {
     if (data.checked === false ) {
         DataError.textContent = "Please accept";
         data.classList.add("errorborder")
         DataError.classList.add("errortxt")
         data.classList.remove("verifiedborder")
-        datatrue = false;
 
 } else {
         DataError.textContent = "";
         data.classList.remove("errorborder")
         DataError.classList.remove("errortxt")
         data.classList.add("verifiedborder")
-        datatrue = true;
     }
 
-})
+}
+
+data.addEventListener("change", validateData);
 
 
 //Topic Error //
 
-subject.addEventListener("change", function() {
+function validateTopic() {
     const subjectvalue = subject.value
 
     if (subject.value === "") {
@@ -280,42 +238,39 @@ subject.addEventListener("change", function() {
         subject.classList.add("verifiedborder")
         subjecttrue = true;
     }
-})
+}
 
 
+subject.addEventListener("change", validateTopic)
 
-/*Email Error @ alt
+//Validate all
+
 form.addEventListener("submit", function(event) {
     event.preventDefault();
+    const nameIsValid = validateFullName();
+    const emailIsValid = validateEmail();
+    const websiteIsValid = validateWebsite();
+    const topicIsValid = validateTopic();
+    const commentIsValid = validateComments();
+    const dataIsValid = validateData();
 
-    if (email.value.includes("@")) {
-        form.submit()
-        
-    } else { EmailError.textContent = "Please insert valid email"
-
-    }
-})
-    */
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    namesubmit = fullname.value;
-
-if (nametrue === true && emailtrue === true && subjecttrue === true && commenttrue === true && data.checked === true ) {
-        AllError.textContent = "Thanks for your feedback, " + namesubmit;
+if ( 
+    nameIsValid &&
+    emailIsValid &&
+    websiteIsValid &&
+    topicIsValid &&
+    commentIsValid &&
+    dataIsValid
+) {
+     AllError.textContent = "Thanks for your feedback, " + fullname.value + "!" ";
         AllError.classList.remove("allerror")
         AllError.classList.add("allgood")
+
 } else {
         AllError.textContent = "Please check the fields above!";
         AllError.classList.add("allerror")
         AllError.classList.remove("allgood")
 
-        if (data.checked === false ) {
-        DataError.textContent = "Please accept";
-        data.classList.add("errorborder")
-        DataError.classList.add("errortxt")
-        data.classList.remove("verifiedborder")
 } 
-}})
-
-
+})
 

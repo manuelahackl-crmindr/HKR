@@ -432,7 +432,7 @@
         </div>
     </div>
 
-    <section class="booking" id="section-meetme">
+<section class="booking" id="section-meetme">
             <h2>Meet me</h2>
             <h3>Let's collaborate to thrive!<!--Alternative: A short chat, a clear, next step--></h3>
         <div id="meetme">
@@ -443,31 +443,35 @@
                     <li>In German, English or Italian</li>
                 </ul>
             </article>
-            <form id="FormBottom" action="https://formsubmit.co/manu@manuelahackl.de" method="POST">
+            <form id="FormBottom" >
                 
                 <label for="name">Your full name:*</label>
                     <input type="text" name="name" id="name" required />
                         <p id="countname" class="count">Min. of 2 characters required</p>
-                        <p id="error-name" class="errortext"></p>
-                        
+                        <p id="error-name"></p>
 
                 <label for="email">Your email:*</label>
-                    <input type="text" name="email" id="email" required />
-                        <p id="error-email" class="errortext"></p>
-                   
-                    <label for="message">Comments:*</label>
-                    <textarea name="message" id="message" rows="10" required></textarea>
+                    <input type="email" name="email" id="email" required />
+                        <p id="error-email"></p>
+
+                     <label for="message">Comments:*</label>
+                    <textarea name="message" id="message" rows="10" placeholder="What do you want to tell me?" required></textarea>
                         <p id="countcomments" class="count">Min. of 15 characters required</p>
-                        <p id="error-message" class="errortext"></p>
-               
-                    <fieldset>
-                        <label>
-                           <input type="radio" name="radio" id="radio" value="yes" required/> <span>I agree </span>to use my data*
-                        </label>
+                        <p id="error-message"></p>
+
+                <fieldset>
+                    <label>
+                        <input type="radio" name="radio" id="radio" vlaue="true"/> <span>I agree </span>to use my data*</label>
+                            <p id="error-data"></p>
                     </fieldset>
+
+                <div id="submit-error"><p id="all-error"></p>
+                </div>
+                
                 <div class="btncontact">
                     <input type="reset" value="Clear" />
                     <input type="submit" value="Submit" />
+                    <p id="suberror"></p>
                 </div>
                 <p class="count">*Field is required</p>
             </form>
@@ -495,6 +499,7 @@
                 </nav>
         </section>
     </footer>
-</body>
     <script src="script.js"></script>
+</body>
+    
 </html>

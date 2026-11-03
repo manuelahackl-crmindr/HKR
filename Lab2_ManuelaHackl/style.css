@@ -190,13 +190,24 @@ button, input, #message, select {
 
 select {appearance: base-select;}
 
-select option:hover {}
+/*select option:hover {}
 select option:focus {}
-select option:checked {}
+select option:checked {}*/
 
+form input:focus,
+form textarea:focus,
+form select:focus,
 input[type=text]:focus  {
   border: 1px solid #1F3A52;
 }
+
+form input,
+form textarea,
+form select {
+    transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+
 
 /**input[type=text]:focus,  {
   border: 5px solid #a9d926;
@@ -639,6 +650,10 @@ form {
 
 
  .count, .errortxt {font-size: 11px; margin: 0; padding: 0;}
+
+ .validtxt {
+    color: green;
+}
 
 fieldset {
     border: none; 
