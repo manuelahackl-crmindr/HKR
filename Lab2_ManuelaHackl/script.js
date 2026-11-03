@@ -143,6 +143,26 @@ comments.addEventListener("input", function() {
 
 //Form Event Errors
 //Email Error
+
+email.addEventListener("input", function() { 
+
+    if (!email.validity.valid) {
+        EmailError.textContent = "Please insert valid email";
+        email.classList.add("errorborder")
+        EmailError.classList.add("errortxt")
+        email.classList.remove("verifiedborder")
+        emailtrue = false;
+        
+    }
+    else {EmailError.textContent = "";
+        email.classList.remove("errorborder")
+        EmailError.classList.remove("errortxt")
+        email.classList.add("verifiedborder")
+        emailtrue = true;
+    }
+})
+
+/*old version: validation by @ and email ending:
 const emaildomain = [
     ".de", ".se", ".com", ".co.uk", ".it", ".at", ".ch"
 ]
@@ -164,9 +184,34 @@ email.addEventListener("input", function() { //keyup
         emailtrue = true;
     }
 })
-
+*/
 
 //Website Validation
+
+web.addEventListener("input", function()) {
+    if (web.value ==="") {
+        WebError.textContent = ""
+        web.classList.remove("errorborder")
+        WebError.classList.remove("errortxt")
+        web.classList.add("verifiedborder")
+        webtrue = true;
+    } 
+    else if (!web.validity.valid) {
+            WebError.textContent = "Please insert valid Web-Adress";
+            web.classList.add("errorborder")
+            WebError.classList.add("errortxt")
+            web.classList.remove("verifiedborder")
+            webtrue = false;
+    } else {
+            WebError.textContent = "";
+            web.classList.remove("errorborder")
+            WebError.classList.remove("errortxt")
+            web.classList.add("verifiedborder")
+            webtrue = true;
+    }
+}
+
+/*old version: validation by new url:
 function isValidUrl() {
     const textweb = web.value;
   try {
@@ -208,24 +253,25 @@ data.addEventListener("click", function() {
 })
 
 
-//Topic Error
+//Topic Error //
+
 subject.addEventListener("change", function() {
     const subjectvalue = subject.value
 
-    if (subjectvalue !="Choose a topic") {
-        SubError.textContent = "";
-        subject.classList.remove("errorborder")
-        SubError.classList.remove("errortxt")
-        subject.classList.add("verifiedborder")
-        subjecttrue = true;
-        
-    }
-    else {
+    if (subject.value === "") {
         SubError.textContent = "Please choose a topic";
         subject.classList.add("errorborder")
         SubError.classList.add("errortxt")
         subject.classList.remove("verifiedborder")
         subjecttrue = false;
+        
+    }
+    else {
+        SubError.textContent = "";
+        subject.classList.remove("errorborder")
+        SubError.classList.remove("errortxt")
+        subject.classList.add("verifiedborder")
+        subjecttrue = true;
     }
 })
 

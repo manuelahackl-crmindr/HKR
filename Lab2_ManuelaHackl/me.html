@@ -524,16 +524,16 @@
                         
 
                 <label for="email">Your email:*</label>
-                    <input type="text" name="email" id="email" required />
+                    <input type="email" name="email" id="email" required />
                         <p id="error-email"></p>
 
                 <label for="website">Your website:</label>
-                    <input type="text" name="web" id="web" placeholder="http://..."/>
+                    <input type="url" name="web" id="web" placeholder="http://yourwebsite.com"/>
                         <p id="error-web"></p>
 
                     <label for="subject">Topic of Interest:*</label>
-                    <select type="select" name="subject" id="subject" placeholder="Choose" required>
-                            <option value="work">Choose a topic</option>
+                    <select name="subject" id="subject" required>
+                            <option value="" selected disabled>Choose a topic</option>
                             <option value="contact">Contact me</option>
                             <option value="urgent">Urgent CRM fix</option>
                             <option value="fees">Fees & Conditions</option>
